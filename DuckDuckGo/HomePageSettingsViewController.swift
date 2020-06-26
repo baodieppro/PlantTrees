@@ -52,33 +52,7 @@ class HomePageSettingsViewController: UITableViewController {
         
         let theme = ThemeManager.shared.currentTheme
         cell.decorate(with: theme)
-        
-        guard indexPath.section == 0 else { return }
-
-        let layoutSetting = indexPath.row == 0 ? HomePageLayout.navigationBar : .centered
-        cell.accessoryType = settings.layout == layoutSetting ? .checkmark : .none
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.section == 0 else { return }
-
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        settings.layout = indexPath.row == 0 ? .navigationBar : .centered
-
-        switch settings.layout {
-        case .centered:
-            Pixel.fire(pixel: .settingsNewTabCenteredSelected)
-            
-        case .navigationBar:
-            Pixel.fire(pixel: .settingsNewTabDefaultSelected)
-        }
-        
-        delegate?.homePageChanged()
-
-        tableView.reloadData()
-    }
-    
 }
 
 extension HomePageSettingsViewController: Themable {

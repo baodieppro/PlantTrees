@@ -30,7 +30,6 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var appIconImageView: UIImageView!
     @IBOutlet weak var autocompleteToggle: UISwitch!
     @IBOutlet weak var authenticationToggle: UISwitch!
-    @IBOutlet weak var homePageAccessoryText: UILabel!
     @IBOutlet weak var autoClearAccessoryText: UILabel!
     @IBOutlet weak var versionText: UILabel!
     @IBOutlet weak var openUniversalLinksToggle: UISwitch!
@@ -73,7 +72,6 @@ class SettingsViewController: UITableViewController {
         
         configureAutoClearCellAccessory()
         configureRememberLogins()
-        configureHomePageCellAccessory()
         configureIconViews()
     }
 
@@ -161,20 +159,6 @@ class SettingsViewController: UITableViewController {
         } else {
             autoClearAccessoryText.text = UserText.autoClearAccessoryOff
         }
-    }
-    
-    private func configureHomePageCellAccessory(homePageSettings: HomePageSettings = DefaultHomePageSettings()) {
-
-        switch homePageSettings.layout {
-
-        case .centered:
-            homePageAccessoryText.text = UserText.homePageCenterSearch
-
-        case .navigationBar:
-            homePageAccessoryText.text = UserText.homePageNavigationBar
-
-        }
-        
     }
     
     private func configureRememberLogins() {
