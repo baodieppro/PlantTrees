@@ -27,11 +27,11 @@ public struct AppUrls {
             return isDebugBuild ? "?test=1" : ""
         }
         
-        static let base = ProcessInfo.processInfo.environment["BASE_URL", default: "https://duckduckgo.com"]
+        static let base = ProcessInfo.processInfo.environment["BASE_URL", default: "https://planttrees.eco/"]
         static let externalContentBase = "https://external-content.duckduckgo.com"
         static let staticBase = "https://staticcdn.duckduckgo.com"
         
-        static let autocomplete = "\(base)/ac/"
+        static let autocomplete = "https://duckduckgo.com/ac/"
         
         static let surrogates = "\(base)/contentblocking.js?l=surrogates"
         static let temporaryWhitelist = "\(base)/contentblocking/trackers-whitelist-temporary.txt"
