@@ -1499,10 +1499,10 @@ upgraded by Privacy Protection.</string>
             </objects>
             <point key="canvasLocation" x="3420" y="1634"/>
         </scene>
-        <!--About View Controller-->
+        <!--Acknowledge View Controller-->
         <scene sceneID="c7s-Te-TQA">
             <objects>
-                <viewController id="SSW-dc-N9W" customClass="AboutViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SSW-dc-N9W" customClass="AcknowledgeViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZUZ-KL-b30"/>
                         <viewControllerLayoutGuide type="bottom" id="1HY-Sl-TEq"/>
@@ -1515,7 +1515,7 @@ upgraded by Privacy Protection.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFH-je-iEA" userLabel="About Details View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="677"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoLightText" translatesAutoresizingMaskIntoConstraints="NO" id="GU2-av-rCY">
                                                 <rect key="frame" x="127" y="32" width="160" height="160"/>
@@ -1525,17 +1525,8 @@ upgraded by Privacy Protection.</string>
                                                     </constraint>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy, simplified. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLm-YE-sRY">
-                                                <rect key="frame" x="120.33333333333333" y="224" width="173.33333333333337" height="24.666666666666657"/>
-                                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="30"/>
-                                                </variation>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAH-AB-ttn">
-                                                <rect key="frame" x="67" y="280.66666666666663" width="280" height="336.66666666666663"/>
+                                                <rect key="frame" x="67" y="223.99999999999997" width="280" height="288.33333333333326"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="gxd-Xl-Nse">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="380"/>
@@ -1543,11 +1534,11 @@ upgraded by Privacy Protection.</string>
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <string key="content">At DuckDuckGo, we’re setting the new standard of trust online.
+                                                        <string key="content">The development of PlantTrees has been strongly facilitated by third party code and open source projects. We would like to thank the maintainers of the following projects for letting us use them:
 
-DuckDuckGo Privacy Browser provides all the privacy essentials you need to protect yourself as you search and browse the web, including tracker blocking, smarter encryption, and DuckDuckGo private search. 
-
-After all, the internet shouldn't feel so creepy, and getting the privacy you deserve online should be as simple as closing the blinds.</string>
+DuckDuckGo Copyright (c) 2008 - Present by DuckDuckGo All rights reserved.
+Apache License
+Version 2.0, January 2004</string>
                                                         <attributes>
                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" metaFont="system" size="16"/>
@@ -1558,7 +1549,7 @@ After all, the internet shouldn't feel so creepy, and getting the privacy you de
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-ji-In0">
-                                                <rect key="frame" x="93" y="625.33333333333337" width="228" height="31"/>
+                                                <rect key="frame" x="93" y="520.33333333333337" width="228" height="31"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="aboutPage"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="o8B-yv-dj1"/>
@@ -1579,12 +1570,10 @@ After all, the internet shouldn't feel so creepy, and getting the privacy you de
                                         <constraints>
                                             <constraint firstItem="GU2-av-rCY" firstAttribute="top" secondItem="xFH-je-iEA" secondAttribute="top" constant="32" id="0zj-3V-fWI"/>
                                             <constraint firstItem="ciS-ji-In0" firstAttribute="centerX" secondItem="xFH-je-iEA" secondAttribute="centerX" id="5AX-2K-3yq"/>
-                                            <constraint firstItem="rAH-AB-ttn" firstAttribute="top" secondItem="bLm-YE-sRY" secondAttribute="bottom" constant="32" id="5Sp-vr-1pA"/>
                                             <constraint firstItem="GU2-av-rCY" firstAttribute="centerX" secondItem="xFH-je-iEA" secondAttribute="centerX" id="8s9-9I-6rL"/>
                                             <constraint firstAttribute="bottom" secondItem="ciS-ji-In0" secondAttribute="bottom" constant="20.5" id="PrD-1d-CPJ"/>
-                                            <constraint firstItem="bLm-YE-sRY" firstAttribute="top" secondItem="GU2-av-rCY" secondAttribute="bottom" constant="32" id="UQg-4T-sIY"/>
                                             <constraint firstItem="rAH-AB-ttn" firstAttribute="centerX" secondItem="xFH-je-iEA" secondAttribute="centerX" id="ZT5-wo-axy"/>
-                                            <constraint firstItem="bLm-YE-sRY" firstAttribute="centerX" secondItem="xFH-je-iEA" secondAttribute="centerX" id="s8A-hB-jub"/>
+                                            <constraint firstItem="rAH-AB-ttn" firstAttribute="top" secondItem="GU2-av-rCY" secondAttribute="bottom" constant="32" id="kQA-CL-vL6"/>
                                             <constraint firstItem="ciS-ji-In0" firstAttribute="top" secondItem="rAH-AB-ttn" secondAttribute="bottom" constant="8" id="vr1-jg-zUM"/>
                                         </constraints>
                                     </view>
@@ -1610,7 +1599,6 @@ After all, the internet shouldn't feel so creepy, and getting the privacy you de
                     <navigationItem key="navigationItem" id="zjh-p1-Pkl"/>
                     <connections>
                         <outlet property="descriptionText" destination="rAH-AB-ttn" id="p5Q-4z-Khy"/>
-                        <outlet property="headerText" destination="bLm-YE-sRY" id="y5h-Sy-7LG"/>
                         <outlet property="logoImage" destination="GU2-av-rCY" id="EZj-fA-rc9"/>
                         <outlet property="moreButton" destination="ciS-ji-In0" id="sHL-jd-Gyx"/>
                     </connections>
