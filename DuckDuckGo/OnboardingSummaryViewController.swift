@@ -31,7 +31,7 @@ class OnboardingSummaryViewController: OnboardingContentViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bulletsStack.spacing = isSmall ? 8 : 12
+        bulletsStack.spacing = isSmall ? 16 : 32
         offsetY.constant = isSmall ? -2 : -27
         self.canContinue = true
         timedPixel = TimedPixel(.onboardingSummaryFinished)
