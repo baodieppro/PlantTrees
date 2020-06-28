@@ -39,7 +39,7 @@ extension String {
             return NSMutableAttributedString(string: string, attributes: [
                 NSAttributedString.Key.paragraphStyle: paragraphStyle,
                 NSAttributedString.Key.foregroundColor: color,
-                NSAttributedString.Key.font: UIFont(name: "ProximaNova" + boldModifier, size: fontSize)!
+                NSAttributedString.Key.font: UIFont(name: "InterUI" + boldModifier, size: fontSize)!
             ])
         }
     }

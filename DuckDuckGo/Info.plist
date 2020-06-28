@@ -174,11 +174,18 @@
 	<string>Allows you to upload photographs and videos</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>proximanova-extrabold.otf</string>
-		<string>proximanova-light.otf</string>
-		<string>proximanova-regular.otf</string>
-		<string>proximanova-bold.otf</string>
-		<string>proximanova-semibold.otf</string>
+		<string>Inter-UI-SemiBoldItalic.otf</string>
+        <string>Inter-UI-SemiBold.otf</string>
+        <string>Inter-UI-Regular.otf</string>
+        <string>Inter-UI-Medium.otf</string>
+        <string>Inter-UI-MediumItalic.otf</string>
+        <string>Inter-UI-Italic.otf</string>
+        <string>Inter-UI-ExtraBoldItalic.otf</string>
+        <string>Inter-UI-ExtraBold.otf</string>
+        <string>Inter-UI-BoldItalic.otf</string>
+        <string>Inter-UI-Bold.otf</string>
+        <string>Inter-UI-BlackItalic.otf</string>
+        <string>Inter-UI-Black.otf</string>
 	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>

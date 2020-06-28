@@ -20,7 +20,7 @@
 import XCTest
 import CoreData
 @testable import Core
-@testable import DuckDuckGo
+@testable import PlantTrees
 
 class DatabaseMigrationTests: XCTestCase {
     

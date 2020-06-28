@@ -19,7 +19,7 @@
 
 import Foundation
 import Core
-@testable import DuckDuckGo
+@testable import PlantTrees
 
 class MockDependencyProvider: DependencyProvider {
     

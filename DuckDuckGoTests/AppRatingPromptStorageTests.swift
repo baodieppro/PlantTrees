@@ -18,7 +18,7 @@
 //
 
 import XCTest
-@testable import DuckDuckGo
+@testable import PlantTrees
 import CoreData
 
 class AppRatingPromptStorageTests: XCTestCase {

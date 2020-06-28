@@ -74,7 +74,7 @@ extension UIColor {
     }
 
     public static var cornflowerBlue: UIColor {
-        return UIColor(red: 103.0 / 255.0, green: 143.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+        return UIColor(red: 8.0 / 255.0, green: 166.0 / 255.0, blue: 28.0 / 255.0, alpha: 1.0)
     }
     
     public static var cornflowerDark: UIColor {

@@ -18,7 +18,7 @@
 //
 
 import XCTest
-@testable import DuckDuckGo
+@testable import PlantTrees
 @testable import Core
 
 class TabTests: XCTestCase {

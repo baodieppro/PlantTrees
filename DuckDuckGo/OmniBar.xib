@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,17 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="proximanova-regular.otf">
-            <string>ProximaNova-Regular</string>
+        <array key="Inter-UI-Regular.otf">
+            <string>InterUI-Regular</string>
         </array>
-        <array key="proximanova-semibold.otf">
-            <string>ProximaNova-Semibold</string>
+        <array key="Inter-UI-SemiBold.otf">
+            <string>InterUI-SemiBold</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="ojX-nM-dyN" customClass="OmniBar" customModule="DuckDuckGo" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="ojX-nM-dyN" customClass="OmniBar" customModule="PlantTrees" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="510" height="52"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -26,10 +26,10 @@
                     <rect key="frame" x="7" y="6" width="496" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5D5-iT-bUk">
-                            <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="356" height="40"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Atk-JN-lv8" customClass="RoundedRectangleView" customModule="DuckDuckGo" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Atk-JN-lv8" customClass="RoundedRectangleView" customModule="PlantTrees" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="356" height="40"/>
                                     <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="dropShadow" value="NO"/>
@@ -45,7 +45,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N6K-Lj-Fn6">
-                                    <rect key="frame" x="6" y="0.0" width="348" height="40"/>
+                                    <rect key="frame" x="6" y="0.0" width="344" height="40"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="SuggestLoupe" translatesAutoresizingMaskIntoConstraints="NO" id="u6L-hZ-ptn">
                                             <rect key="frame" x="0.0" y="8" width="30" height="24"/>
@@ -53,10 +53,10 @@
                                                 <constraint firstAttribute="width" constant="30" id="WCw-cm-dCl"/>
                                             </constraints>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sek-4Y-GoT" customClass="SearchFieldContainerView" customModule="DuckDuckGo" customModuleProvider="target">
-                                            <rect key="frame" x="30" y="0.0" width="258" height="40"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sek-4Y-GoT" customClass="SearchFieldContainerView" customModule="PlantTrees" customModuleProvider="target">
+                                            <rect key="frame" x="30" y="0.0" width="254" height="40"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="4JV-px-Ypi" customClass="SiteRatingContainerView" customModule="DuckDuckGo" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="4JV-px-Ypi" customClass="SiteRatingContainerView" customModule="PlantTrees" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PP Network Icon more" translatesAutoresizingMaskIntoConstraints="NO" id="0eq-5H-Wed">
@@ -77,7 +77,7 @@
                                                                 <constraint firstAttribute="width" priority="999" constant="26" id="bIP-ra-VYG"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-fr-tSl" customClass="SiteRatingView" customModule="DuckDuckGo" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-fr-tSl" customClass="SiteRatingView" customModule="PlantTrees" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
                                                             <accessibility key="accessibilityConfiguration" identifier="siteRating">
                                                                 <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -118,15 +118,15 @@
                                                         <outletCollection property="trackerIconConstraints" destination="nZr-Xv-4SO" collectionClass="NSMutableArray" id="Y5X-nB-a50"/>
                                                     </connections>
                                                 </view>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqM-N4-jNd" customClass="TextFieldWithInsets" customModule="DuckDuckGo" customModuleProvider="target">
-                                                    <rect key="frame" x="30" y="0.0" width="228" height="40"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqM-N4-jNd" customClass="TextFieldWithInsets" customModule="PlantTrees" customModuleProvider="target">
+                                                    <rect key="frame" x="30" y="0.0" width="224" height="40"/>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="searchEntry">
                                                         <accessibilityTraits key="traits" searchField="YES"/>
                                                         <bool key="isElement" value="YES"/>
                                                     </accessibility>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="InterUI-SemiBold" family="Inter UI" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" smartQuotesType="no"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
@@ -160,7 +160,7 @@
                                             </connections>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt8-We-5tV">
-                                            <rect key="frame" x="288" y="0.0" width="30" height="40"/>
+                                            <rect key="frame" x="284" y="0.0" width="30" height="40"/>
                                             <accessibility key="accessibilityConfiguration" label="Clear Text"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" priority="900" constant="30" id="Ym5-FI-uOP"/>
@@ -171,7 +171,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-QY-LVl">
-                                            <rect key="frame" x="318" y="8" width="30" height="24"/>
+                                            <rect key="frame" x="314" y="8" width="30" height="24"/>
                                             <accessibility key="accessibilityConfiguration" label="Refresh Page"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" priority="900" constant="30" id="PHR-dd-ThY"/>
@@ -206,7 +206,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rB-5w-de3">
-                            <rect key="frame" x="364" y="0.0" width="30" height="40"/>
+                            <rect key="frame" x="360" y="0.0" width="30" height="40"/>
                             <accessibility key="accessibilityConfiguration" label="Settings"/>
                             <constraints>
                                 <constraint firstAttribute="width" priority="900" constant="30" id="LgT-YY-fGl"/>
@@ -217,7 +217,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJo-2d-gri">
-                            <rect key="frame" x="398" y="0.0" width="30" height="40"/>
+                            <rect key="frame" x="394" y="0.0" width="30" height="40"/>
                             <accessibility key="accessibilityConfiguration" label="Browsing Menu"/>
                             <constraints>
                                 <constraint firstAttribute="width" priority="900" constant="30" id="JrJ-da-Qn3"/>
@@ -228,8 +228,8 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHT-9R-ERy">
-                            <rect key="frame" x="432" y="0.0" width="64" height="40"/>
-                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                            <rect key="frame" x="428" y="0.0" width="68" height="40"/>
+                            <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="17"/>
                             <inset key="contentEdgeInsets" minX="6" minY="0.0" maxX="6" maxY="0.0"/>
                             <state key="normal" title="Cancel">
                                 <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

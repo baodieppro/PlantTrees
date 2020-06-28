@@ -22,29 +22,29 @@ import UIKit
 extension UIFont {
 
     private enum Name: String {
-        case proximaNovaRegular = "ProximaNova-Regular"
-        case proximaNovaLight = "ProximaNova-Light"
-        case proximaNovaSemibold = "ProximaNova-Semibold"
-        case proximaNovaBold = "ProximaNova-Bold"
+        case interUIRegular = "InterUI-Regular"
+        case interUILight = "InterUI-Light"
+        case interUISemibold = "InterUI-Semibold"
+        case interUIBold = "InterUI-Bold"
     }
 
     public static func appFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: Name.proximaNovaRegular.rawValue, size: size) ??
+        return UIFont(name: Name.interUIRegular.rawValue, size: size) ??
                UIFont.systemFont(ofSize: size)
     }
 
     public static func lightAppFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: Name.proximaNovaLight.rawValue, size: size) ??
+        return UIFont(name: Name.interUILight.rawValue, size: size) ??
                UIFont.systemFont(ofSize: size, weight: UIFont.Weight.light)
     }
 
     public static func semiBoldAppFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: Name.proximaNovaSemibold.rawValue, size: size) ??
+        return UIFont(name: Name.interUISemibold.rawValue, size: size) ??
                UIFont.systemFont(ofSize: size, weight: UIFont.Weight.semibold)
     }
 
     public static func boldAppFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: Name.proximaNovaBold.rawValue, size: size) ??
+        return UIFont(name: Name.interUIBold.rawValue, size: size) ??
                UIFont.boldSystemFont(ofSize: size)
     }
 }

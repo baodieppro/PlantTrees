@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sXL-hA-WaJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sXL-hA-WaJ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="proximanova-bold.otf">
-            <string>ProximaNova-Bold</string>
+        <array key="Inter-UI-Bold.otf">
+            <string>InterUI-Bold</string>
         </array>
-        <array key="proximanova-semibold.otf">
-            <string>ProximaNova-Semibold</string>
+        <array key="Inter-UI-SemiBold.otf">
+            <string>InterUI-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
         <!--Privacy Protection Header Controller-->
         <scene sceneID="f21-bp-L0N">
             <objects>
-                <viewController id="sXL-hA-WaJ" customClass="PrivacyProtectionHeaderController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sXL-hA-WaJ" customClass="PrivacyProtectionHeaderController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="54I-z7-VwQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,14 +28,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tQB-uB-beX">
-                                        <rect key="frame" x="103.5" y="20" width="168" height="148"/>
+                                        <rect key="frame" x="95.5" y="20" width="184.5" height="152"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PP Grade Null" translatesAutoresizingMaskIntoConstraints="NO" id="dBn-cZ-MJt">
-                                                <rect key="frame" x="0.0" y="0.0" width="168" height="120"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="120"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.example.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfX-2n-ECb">
-                                                <rect key="frame" x="0.0" y="128" width="168" height="20"/>
-                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="128" width="184.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="InterUI-SemiBold" family="Inter UI" pointSize="20"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -77,8 +77,8 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY GRADE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="176.5" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-gA-C6m">
-                            <rect key="frame" x="73.5" y="64" width="93" height="12"/>
-                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                            <rect key="frame" x="71" y="63" width="98.5" height="14"/>
+                            <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="12"/>
                             <color key="textColor" red="0.57647058819999997" green="0.57647058819999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -95,8 +95,8 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SITE PROTECTION DISABLED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="187.5" translatesAutoresizingMaskIntoConstraints="NO" id="oMQ-8E-39A">
-                            <rect key="frame" x="39" y="64" width="162.5" height="12"/>
-                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                            <rect key="frame" x="35" y="63" width="170.5" height="14"/>
+                            <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="12"/>
                             <color key="textColor" red="0.57647058819999997" green="0.57647058819999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -108,30 +108,30 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="Enf-C9-vbM"/>
                 </view>
-                <view contentMode="scaleToFill" id="7Tq-7h-2gl" customClass="ProtectionUpgradedView" customModule="DuckDuckGo" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="7Tq-7h-2gl" customClass="ProtectionUpgradedView" customModule="PlantTrees" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vo6-q8-d8T">
-                            <rect key="frame" x="12.5" y="58" width="175.5" height="24"/>
+                            <rect key="frame" x="9.5" y="58" width="181" height="24"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENHANCED FROM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBS-tt-KGX">
-                                    <rect key="frame" x="0.0" y="6" width="102.5" height="12"/>
-                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                                    <rect key="frame" x="0.0" y="5" width="106.5" height="14.5"/>
+                                    <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="12"/>
                                     <color key="textColor" red="0.57647058819999997" green="0.57647058819999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PP Inline D" translatesAutoresizingMaskIntoConstraints="NO" id="3ZI-su-kBH">
-                                    <rect key="frame" x="105.5" y="0.0" width="24" height="24"/>
+                                    <rect key="frame" x="109.5" y="0.0" width="24" height="24"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDS-0j-9tL" userLabel="TO">
-                                    <rect key="frame" x="132.5" y="6" width="16" height="12"/>
-                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                                    <rect key="frame" x="136.5" y="5" width="17.5" height="14.5"/>
+                                    <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="12"/>
                                     <color key="textColor" red="0.57647058819999997" green="0.57647058819999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PP Inline B" translatesAutoresizingMaskIntoConstraints="NO" id="9nI-61-doM">
-                                    <rect key="frame" x="151.5" y="0.0" width="24" height="24"/>
+                                    <rect key="frame" x="157" y="0.0" width="24" height="24"/>
                                 </imageView>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="EF8-0n-Jcq"/>

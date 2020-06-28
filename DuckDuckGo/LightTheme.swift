@@ -37,7 +37,7 @@ struct LightTheme: Theme {
     var barTintColor = UIColor.nearlyBlackLight
     
     var navigationBarTitleColor = UIColor.nearlyBlackLight
-    var navigationBarTintColor = UIColor.darkGreyish
+    var navigationBarTintColor = UIColor.cornflowerBlue
     
     var tintOnBlurColor = UIColor.white
     

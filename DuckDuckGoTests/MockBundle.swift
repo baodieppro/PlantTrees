@@ -18,7 +18,7 @@
 //
 
 import Foundation
-@testable import DuckDuckGo
+@testable import PlantTrees
 @testable import Core
 
 class MockBundle: InfoBundle {

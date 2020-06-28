@@ -19,7 +19,7 @@
 
 import Foundation
 import XCTest
-@testable import DuckDuckGo
+@testable import PlantTrees
 @testable import Core
 
 class PrivacyProtectionTrackerNetworksTests: XCTestCase {
