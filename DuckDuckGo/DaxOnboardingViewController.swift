@@ -59,8 +59,20 @@ class DaxOnboardingViewController: UIViewController, Onboarding {
     }
     
     private func applyPointerRotation() {
-        let rads = CGFloat(45 * Double.pi / 180)
-        pointerView.layer.transform = CATransform3DMakeRotation(rads, 0.0, 0.0, 1.0)
+        let width = pointerView.frame.size.width
+        let height = pointerView.frame.size.height
+        let path = CGMutablePath()
+
+        path.move(to: CGPoint(x: 0, y: height))
+        path.addLine(to: CGPoint(x:width/2, y: 0))
+        path.addLine(to: CGPoint(x:width, y:height))
+        path.addLine(to: CGPoint(x:0, y:height))
+
+        let shape = CAShapeLayer()
+        shape.path = path
+        shape.fillColor = UIColor(white: 1, alpha: 0.8).cgColor
+
+        pointerView.layer.insertSublayer(shape, at: 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
