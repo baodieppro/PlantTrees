@@ -20,6 +20,7 @@
 import UIKit
 
 class DaxOnboardingViewController: UIViewController, Onboarding {
+    @IBOutlet weak var pointerView: UIView!
     
     struct Constants {
         
@@ -31,12 +32,7 @@ class DaxOnboardingViewController: UIViewController, Onboarding {
     weak var delegate: OnboardingDelegate?
     weak var daxDialog: DaxDialogViewController?
     
-    @IBOutlet weak var welcomeMessage: UIView!
     @IBOutlet weak var daxDialogContainer: UIView!
-    @IBOutlet weak var daxDialogContainerHeight: NSLayoutConstraint!
-    @IBOutlet weak var daxIcon: UIView!
-    @IBOutlet weak var onboardingIcon: UIView!
-    @IBOutlet weak var transitionalIcon: UIView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var backgroundView: UIView!
     
@@ -58,18 +54,19 @@ class DaxOnboardingViewController: UIViewController, Onboarding {
         daxDialog?.message = UserText.daxDialogOnboardingMessage
         daxDialog?.theme = LightTheme()
         daxDialog?.reset()
-        daxDialogContainerHeight.constant = isSmall ? 190 : 195
-
-        button.displayDropShadow()
-        daxIcon.isHidden = true
+        
+        applyPointerRotation()
+    }
+    
+    private func applyPointerRotation() {
+        let rads = CGFloat(45 * Double.pi / 180)
+        pointerView.layer.transform = CATransform3DMakeRotation(rads, 0.0, 0.0, 1.0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard !view.isHidden else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDelay) {
-            self.transitionFromOnboarding()
-        }
+        self.transitionFromOnboarding()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,79 +79,25 @@ class DaxOnboardingViewController: UIViewController, Onboarding {
         } else if let controller = segue.destination as? OnboardingViewController {
             controller.delegate = self
             controller.updateForDaxOnboarding()
+        } else if segue.identifier == "embed" {
+            segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
         }
         
     }
 
     func transitionFromOnboarding() {
-
-        // using snapshots means the original views don't get messed up by their constraints when subsequent animations kick off
-        let transitionIconSS: UIView = self.transitionalIcon.snapshotView(afterScreenUpdates: true) ?? self.transitionalIcon
-        transitionIconSS.frame = self.transitionalIcon.frame
-        view.addSubview(transitionIconSS)
-        self.transitionalIcon.isHidden = true
-        
-        let onboardingIconSS: UIView = self.onboardingIcon.snapshotView(afterScreenUpdates: true) ?? self.onboardingIcon
-        onboardingIconSS.frame = self.onboardingIcon.frame
-        view.addSubview(onboardingIconSS)
-        self.onboardingIcon.isHidden = true
-
         UIView.animate(withDuration: 0.3, animations: {
-            
-            // the dax dialog icon is not exactly centered with or the same size as this icon so we need to account for this in the animation
-            onboardingIconSS.frame = CGRect(x: 0, y: 0, width: 76, height: 76)
-            onboardingIconSS.center = CGPoint(x: self.daxIcon.center.x, y: self.daxIcon.center.y - 2)
-            onboardingIconSS.alpha = 0.0
-
-            transitionIconSS.frame = self.daxIcon.frame
-            transitionIconSS.alpha = 1.0
-            
             self.backgroundView.alpha = 0.0
         }, completion: { _ in
-            self.daxIcon.isHidden = false
-            onboardingIconSS.isHidden = true
-            transitionIconSS.isHidden = true
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                onboardingIconSS.removeFromSuperview()
-                transitionIconSS.removeFromSuperview()
-                self.transitionToDaxDialog()
-            }
-            
+            self.transitionToDaxDialog()
         })
 
     }
 
     func transitionToDaxDialog() {
-
-        let snapshot: UIView = self.daxIcon.snapshotView(afterScreenUpdates: true) ?? self.daxIcon
-        snapshot.frame = self.daxIcon.frame
-        view.addSubview(snapshot)
-        self.daxIcon.isHidden = true
-        
-        UIView.animate(withDuration: Constants.animationDuration, animations: {
-            self.welcomeMessage.alpha = 0.0
-
-            if let frame = self.daxDialog?.icon.frame,
-                let localFrame = self.daxDialog?.icon.superview!.convert(frame, to: self.view) {
-                self.daxIcon.frame = localFrame
-                snapshot.frame = localFrame
-            }
-
-        }, completion: { _ in
-            
-            // fade out while it's being shown again below, otherwise there's an abrupt change when the double dropshadow disappears
-            UIView.animate(withDuration: 1.0, animations: {
-                snapshot.alpha = 0.0
-            }, completion: { _ in
-                snapshot.removeFromSuperview()
-            })
-            
-            self.showDaxDialog {
-                self.daxDialog?.start()
-            }
-        })
-        
+        self.showDaxDialog {
+            self.daxDialog?.start()
+        }
     }
     
     @IBAction func onTapButton() {

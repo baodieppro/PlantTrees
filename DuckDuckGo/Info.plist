@@ -175,17 +175,20 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter-UI-SemiBoldItalic.otf</string>
-        <string>Inter-UI-SemiBold.otf</string>
-        <string>Inter-UI-Regular.otf</string>
-        <string>Inter-UI-Medium.otf</string>
-        <string>Inter-UI-MediumItalic.otf</string>
-        <string>Inter-UI-Italic.otf</string>
-        <string>Inter-UI-ExtraBoldItalic.otf</string>
-        <string>Inter-UI-ExtraBold.otf</string>
-        <string>Inter-UI-BoldItalic.otf</string>
-        <string>Inter-UI-Bold.otf</string>
-        <string>Inter-UI-BlackItalic.otf</string>
-        <string>Inter-UI-Black.otf</string>
+		<string>Inter-UI-SemiBold.otf</string>
+		<string>Inter-UI-Regular.otf</string>
+		<string>Inter-UI-Medium.otf</string>
+		<string>Inter-UI-MediumItalic.otf</string>
+		<string>Inter-UI-Italic.otf</string>
+		<string>Inter-UI-ExtraBoldItalic.otf</string>
+		<string>Inter-UI-ExtraBold.otf</string>
+		<string>Inter-UI-BoldItalic.otf</string>
+		<string>Inter-UI-Bold.otf</string>
+		<string>Inter-UI-BlackItalic.otf</string>
+		<string>Inter-UI-Black.otf</string>
+		<string>Poppins-Medium.otf</string>
+		<string>Poppins-Regular.otf</string>
+		<string>Poppins-SemiBold.otf</string>
 	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>

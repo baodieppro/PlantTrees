@@ -65,7 +65,6 @@ class DaxDialogViewController: UIViewController {
         
         applyPointerRotation()
         textArea.displayDropShadow()
-        button.displayDropShadow()
     }
     
     private func initLabel() {
