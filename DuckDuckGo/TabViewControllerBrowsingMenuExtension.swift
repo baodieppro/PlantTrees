@@ -26,14 +26,17 @@ extension TabViewController {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alert.overrideUserInterfaceStyle()
-        alert.addAction(title: UserText.actionNewTab) { [weak self] in
-            self?.onNewTabAction()
-        }
+//        alert.addAction(title: UserText.actionNewTab) { [weak self] in
+//            self?.onNewTabAction()
+//        }
         
         if let link = link, !isError {
-            if let action = buildFindInPageAction(forLink: link) {
-                alert.addAction(action)
+            let action = UIAlertAction(title: UserText.actionShare, style: .default) { [weak self] (action) in
+               guard let self = self else { return }
+               self.onShareAction(forLink: link, printFormatter: self.webView.viewPrintFormatter())
             }
+//            action.setValue(<#T##value: Any?##Any?#>, forKey: "image")
+            alert.addAction(action)
             
             if let action = buildSaveBookmarkAction(forLink: link) {
                 alert.addAction(action)
@@ -42,15 +45,18 @@ extension TabViewController {
             if let action = buildSaveFavoriteAction(forLink: link) {
                 alert.addAction(action)
             }
-
-            if let action = buildKeepSignInAction(forLink: link) {
+            
+            if let action = buildCopyAddressAction(forLink: link) {
+                alert.addAction(action)
+            }
+            
+            if let action = buildFindInPageAction(forLink: link) {
                 alert.addAction(action)
             }
 
-            alert.addAction(title: UserText.actionShare) { [weak self] in
-                guard let self = self else { return }
-                self.onShareAction(forLink: link, printFormatter: self.webView.viewPrintFormatter())
-            }
+//            if let action = buildKeepSignInAction(forLink: link) {
+//                alert.addAction(action)
+//            }
             
             let title = tabModel.isDesktop ? UserText.actionRequestMobileSite : UserText.actionRequestDesktopSite
             alert.addAction(title: title) { [weak self] in
@@ -58,17 +64,20 @@ extension TabViewController {
             }
         }
         
-        if let domain = siteRating?.domain {
-            alert.addAction(buildWhitelistAction(forDomain: domain))
-        }
+//        if let domain = siteRating?.domain {
+//            alert.addAction(buildWhitelistAction(forDomain: domain))
+//        }
         
-        alert.addAction(title: UserText.actionReportBrokenSite) { [weak self] in
-            self?.onReportBrokenSiteAction()
-        }
+//        alert.addAction(title: UserText.actionReportBrokenSite) { [weak self] in
+//            self?.onReportBrokenSiteAction()
+//        }
         alert.addAction(title: UserText.actionSettings) { [weak self] in
             self?.onBrowsingSettingsAction()
         }
-        alert.addAction(title: UserText.actionCancel, style: .cancel)
+        
+        let cancelAction = UIAlertAction(title: UserText.actionCancel, style: .cancel, handler: nil)
+        cancelAction.setValue(ThemeManager.shared.currentTheme.buttonTintColor, forKey: "titleTextColor")
+        alert.addAction(cancelAction)
         return alert
     }
     
@@ -84,6 +93,12 @@ extension TabViewController {
     private func onNewTabAction() {
         Pixel.fire(pixel: .browsingMenuNewTab)
         delegate?.tabDidRequestNewTab(self)
+    }
+    
+    private func buildCopyAddressAction(forLink link: Link) -> UIAlertAction? {
+        return UIAlertAction(title: UserText.copyAddress, style: .default) { [weak self] _ in
+            UIPasteboard.general.string = link.url.absoluteString
+        }
     }
     
     private func buildFindInPageAction(forLink link: Link) -> UIAlertAction? {

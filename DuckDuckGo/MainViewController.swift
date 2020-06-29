@@ -461,7 +461,7 @@ class MainViewController: UIViewController {
     private func refreshTabIcon() {
         tabsButton.accessibilityHint = UserText.numberOfTabs(tabManager.count)
         tabSwitcherButton.tabCount = tabManager.count
-        tabSwitcherButton.hasUnread = tabManager.hasUnread
+//        tabSwitcherButton.hasUnread = tabManager.hasUnread
     }
 
     private func refreshOmniBar() {

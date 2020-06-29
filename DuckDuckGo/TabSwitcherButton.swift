@@ -18,7 +18,6 @@
 //
 
 import UIKit
-import Lottie
 
 protocol TabSwitcherButtonDelegate: NSObjectProtocol {
     
@@ -44,7 +43,7 @@ class TabSwitcherButton: UIView {
 
     var workItem: DispatchWorkItem?
 
-    let anim = LOTAnimationView(name: "new_tab")
+    let anim = UIImageView(image: UIImage(named: "Tabs")!.withRenderingMode(.alwaysTemplate))
     let tint = UIView(frame: .zero)
     let label = UILabel()
     
@@ -64,12 +63,6 @@ class TabSwitcherButton: UIView {
         label.attributedText = NSAttributedString(string: text, attributes: attributes())
     }
     
-    var hasUnread: Bool = false {
-        didSet {
-            anim.animationProgress = hasUnread ? 1.0 : 0.0
-        }
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -82,7 +75,7 @@ class TabSwitcherButton: UIView {
         label.isUserInteractionEnabled = false
         
         addSubview(anim)
-        addSubview(label)
+//        addSubview(label)
         addSubview(tint)
         
         configureAnimationView()
@@ -108,10 +101,7 @@ class TabSwitcherButton: UIView {
     }
 
     private func configureAnimationView() {
-        anim.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        anim.layer.masksToBounds = false
-        anim.isUserInteractionEnabled = false
-        
+        anim.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         anim.center = CGPoint(x: bounds.midX, y: bounds.midY)
     }
     
@@ -171,7 +161,6 @@ class TabSwitcherButton: UIView {
     }
     
     func incrementAnimated() {
-        anim.play()
         UIView.animate(withDuration: Constants.labelFadeDuration, animations: {
             self.label.alpha = 0.0
         }, completion: { _ in
@@ -205,13 +194,7 @@ extension TabSwitcherButton: Themable {
     func decorate(with theme: Theme) {
         backgroundColor = theme.barBackgroundColor
         tintColor = theme.barTintColor
-
-        switch theme.currentImageSet {
-        case .light:
-            anim.setAnimation(named: "new_tab_dark")
-        case .dark:
-            anim.setAnimation(named: "new_tab")
-        }
+        anim.tintColor = tintColor
 
         addSubview(anim)
         configureAnimationView()

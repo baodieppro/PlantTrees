@@ -45,7 +45,7 @@
 "action.title.refresh" = "Refresh";
 "action.title.readingList" = "Add to Reading List";
 "action.title.copy" = "Copy";
-"action.title.share"= "Share...";
+"action.title.share"= "Share Page With...";
 "action.title.request.desktop.site" = "Request Desktop Site";
 "action.title.request.mobile.site" = "Request Mobile Site";
 "action.title.add.to.whitelist" = "Add to Whitelist";
@@ -168,6 +168,8 @@
 
 "bookmark.title.placeholder" = "Website title";
 "bookmark.address.placeholder" = "www.example.com";
+
+"copyaddress.title" = "Copy Address";
 
 "findinpage.title" = "Find in Page";
 "findinpage.count" = "%1$d of %2$d";

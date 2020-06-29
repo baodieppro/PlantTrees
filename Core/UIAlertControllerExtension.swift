@@ -36,5 +36,6 @@ public extension UIAlertController {
                 overrideUserInterfaceStyle = .light
             }
         }
+        view.tintColor = ThemeManager.shared.currentTheme.barTintColor
     }
 }
