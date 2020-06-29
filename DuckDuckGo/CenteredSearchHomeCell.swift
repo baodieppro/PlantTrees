@@ -40,6 +40,8 @@ class CenteredSearchHomeCell: UICollectionViewCell {
     @IBOutlet weak var searchLoupeLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var promptText: UILabel!
     @IBOutlet weak var searchLoupe: UIImageView!
+    @IBOutlet weak var totalTrees: UILabel!
+    @IBOutlet weak var treesDescription: UILabel!
     
     private lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTap))
 
@@ -111,5 +113,8 @@ extension CenteredSearchHomeCell: Themable {
         promptText.textColor = theme.searchBarTextPlaceholderColor
         
         searchBackground.layer.borderColor = theme.searchBarBorderColor.cgColor
+        
+        totalTrees.textColor = theme.buttonTintColor
+        treesDescription.textColor = theme.searchBarClearTextIconColor
     }
 }

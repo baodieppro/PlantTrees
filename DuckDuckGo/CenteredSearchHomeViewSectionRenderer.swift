@@ -131,8 +131,10 @@ class CenteredSearchHomeViewSectionRenderer: HomeViewSectionRenderer {
         let targetHeight = (scrollView.frame.height / heightRatio) - searchCenterOffset
         let y = scrollView.contentOffset.y
 
-        let diff = targetHeight - y - offsetY
+        let diff = targetHeight - y - offsetY - 150
 
+        print(diff, Constants.scrollUpAdjustment)
+        
         guard diff < offsetY else {
             // search bar is in the center
             controller?.searchHeaderTransition = 0.0

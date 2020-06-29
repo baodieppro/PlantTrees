@@ -42,7 +42,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="space" id="YY6-mj-6Xj">
-                                        <rect key="frame" x="0.0" y="118.66666666666667" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="193.66666666666666" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -50,10 +50,10 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="centeredSearch" id="54m-Mn-tex" customClass="CenteredSearchHomeCell" customModule="PlantTrees" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="0.0" width="342" height="287"/>
+                                        <rect key="frame" x="60" y="0.0" width="342" height="437"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="287"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="437"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eQ8-iA-i1e">
@@ -111,18 +111,34 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90,162,740" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kd-5s-YDH">
+                                                    <rect key="frame" x="99" y="333" width="144" height="31.333333333333314"/>
+                                                    <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trees planted by PlantTrees users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC9-d7-5k9">
+                                                    <rect key="frame" x="58.666666666666657" y="372.33333333333331" width="224.99999999999997" height="17"/>
+                                                    <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="7Jf-KE-oXj" firstAttribute="leading" secondItem="3i0-li-iSv" secondAttribute="leading" id="2Ia-p2-6HX"/>
-                                            <constraint firstAttribute="bottom" secondItem="7Jf-KE-oXj" secondAttribute="bottom" id="bHQ-i4-np1"/>
+                                            <constraint firstItem="nC9-d7-5k9" firstAttribute="top" secondItem="3kd-5s-YDH" secondAttribute="bottom" constant="8" id="3NT-gI-UKW"/>
+                                            <constraint firstItem="3kd-5s-YDH" firstAttribute="top" secondItem="7Jf-KE-oXj" secondAttribute="bottom" constant="46" id="NJu-c1-peL"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Jf-KE-oXj" secondAttribute="bottom" constant="150" id="bHQ-i4-np1"/>
                                             <constraint firstItem="eQ8-iA-i1e" firstAttribute="centerX" secondItem="3i0-li-iSv" secondAttribute="centerX" id="em6-ew-E3V"/>
+                                            <constraint firstItem="3kd-5s-YDH" firstAttribute="centerX" secondItem="3i0-li-iSv" secondAttribute="centerX" id="fJd-Bm-GM8"/>
+                                            <constraint firstItem="nC9-d7-5k9" firstAttribute="centerX" secondItem="3i0-li-iSv" secondAttribute="centerX" id="kkm-9A-RQ7"/>
                                             <constraint firstItem="3i0-li-iSv" firstAttribute="trailing" secondItem="7Jf-KE-oXj" secondAttribute="trailing" id="niW-Cm-waP"/>
                                             <constraint firstItem="7Jf-KE-oXj" firstAttribute="top" secondItem="eQ8-iA-i1e" secondAttribute="bottom" constant="32" id="pw7-Bg-mC2"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="3i0-li-iSv"/>
-                                        <size key="customSize" width="342" height="287"/>
+                                        <size key="customSize" width="342" height="437"/>
                                         <connections>
                                             <outlet property="imageView" destination="39W-ag-iVs" id="ob1-89-hb0"/>
                                             <outlet property="promptText" destination="73D-OT-n1K" id="Cf8-Rg-Vw7"/>
@@ -132,6 +148,8 @@
                                             <outlet property="searchBackgroundTrailingConstraint" destination="niW-Cm-waP" id="fMr-Et-hcZ"/>
                                             <outlet property="searchLoupe" destination="Cfx-pb-o8i" id="796-zE-CwE"/>
                                             <outlet property="searchLoupeLeadingConstraint" destination="Xoc-WQ-gvx" id="Cto-tw-dBb"/>
+                                            <outlet property="totalTrees" destination="3kd-5s-YDH" id="NNA-G7-ePg"/>
+                                            <outlet property="treesDescription" destination="nC9-d7-5k9" id="bkT-fp-hlz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
