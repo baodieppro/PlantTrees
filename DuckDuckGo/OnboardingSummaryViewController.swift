@@ -23,7 +23,6 @@ import Core
 class OnboardingSummaryViewController: OnboardingContentViewController {
     
     @IBOutlet var bulletsStack: UIStackView!
-    @IBOutlet var offsetY: NSLayoutConstraint!
     
     private var timedPixel: TimedPixel?
     
@@ -32,13 +31,12 @@ class OnboardingSummaryViewController: OnboardingContentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bulletsStack.spacing = isSmall ? 16 : 32
-        offsetY.constant = isSmall ? -2 : -27
         self.canContinue = true
         timedPixel = TimedPixel(.onboardingSummaryFinished)
     }
     
     override var continueButtonTitle: String {
-        return UserText.onboardingContinue
+        return UserText.onboardingStartBrowsing
     }
     
     override func viewDidDisappear(_ animated: Bool) {

@@ -296,9 +296,10 @@
 "feedback.form.caption" = "Please tell us what we can improve";
 
 "onboardingWelcomeHeader" = "Welcome to DuckDuckGo!";
-"onboardingContinue" = "START BROWSING";
+"onboardingContinue" = "CONTINUE";
 "onboardingSkip" = "Skip";
-"onboardingStartBrowsing" = "Start Browsing";
+"onboardingNext" = "NEXT";
+"onboardingStartBrowsing" = "START BROWSING";
 "onboardingSetAppIcon" = "Set App Icon";
 "onboardingNotificationsAccept" = "Turn on Notifications";
 "onboardingNotificationsDeny" = "Not now";

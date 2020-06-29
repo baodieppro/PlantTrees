@@ -33,7 +33,6 @@ class CenteredSearchHomeCell: UICollectionViewCell {
     }
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var logoText: UIImageView!
     @IBOutlet weak var searchBackground: RoundedRectangleView!
     @IBOutlet weak var searchBackgroundHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBackgroundLeadingConstraint: NSLayoutConstraint!
@@ -110,6 +109,5 @@ extension CenteredSearchHomeCell: Themable {
         searchLoupe.tintColor = theme.barTintColor
         
         promptText.textColor = theme.searchBarTextPlaceholderColor
-        logoText.tintColor = theme.ddgTextTintColor
     }
 }

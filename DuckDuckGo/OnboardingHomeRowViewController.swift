@@ -19,24 +19,10 @@ import Core
 import AVKit
 
 class OnboardingHomeRowViewController: OnboardingContentViewController {
-    
-    @IBOutlet weak var videoContainerView: VideoContainerView!
-    
-    var layer: AVPlayerLayer?
-    var player: AVPlayer?
-    
-    @IBOutlet weak var playButton: UIImageView!
-    
     private var userInteracted = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addVideo()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        startVideo()
     }
     
     override var header: String {
@@ -44,71 +30,14 @@ class OnboardingHomeRowViewController: OnboardingContentViewController {
     }
     
     override var continueButtonTitle: String {
-        return UserText.onboardingStartBrowsing
+        return UserText.onboardingNext
     }
         
     override func onContinuePressed(navigationHandler: @escaping () -> Void) {
         navigationHandler()
     }
     
-    @IBAction func playVideo() {
-        guard let player = player else { return }
-        
-        if !userInteracted {
-            userInteracted = true
-            Pixel.fire(pixel: .homeRowInstructionsReplayed)
-        }
-        
-        player.seek(to: CMTime(seconds: 0.0, preferredTimescale: player.currentTime().timescale))
-        startVideo()
-    }
-    
-    private func addVideo() {
-        let movieURL: URL
-
-        if #available(iOS 13, *) {
-            movieURL = Bundle.main.url(forResource: "ios13-home-row", withExtension: "mp4")!
-        } else {
-            movieURL = Bundle.main.url(forResource: "ios12-home-row", withExtension: "mp4")!
-        }
-
-        player = AVPlayer(url: movieURL)
-        _ = try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: .mixWithOthers)
-
-        layer = AVPlayerLayer(player: player)
-        if let layer = layer {
-            layer.videoGravity = .resizeAspect
-            videoContainerView.layer.addSublayer(layer)
-            layer.frame = videoContainerView.bounds
-            videoContainerView.playerLayer = layer
-        }
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(playerDidFinishPlaying(note:)),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
-        
-    }
-
-    private func startVideo() {
-        playButton.isHidden = true
-        player?.play()
-    }
-
-    @objc func playerDidFinishPlaying(note: NSNotification) {
-        HomeRowReminder().setShown()
-        playButton.isHidden = false
-    }
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
-    }
-}
-
-class VideoContainerView: UIView {
-    var playerLayer: CALayer?
-
-    override func layoutSublayers(of layer: CALayer) {
-      super.layoutSublayers(of: layer)
-      playerLayer?.frame = self.bounds
     }
 }

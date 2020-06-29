@@ -40,57 +40,57 @@
                                 <rect key="frame" x="0.0" y="384" width="414" height="512"/>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-mT-jjj">
-                                <rect key="frame" x="22" y="44" width="370" height="235.5"/>
+                                <rect key="frame" x="22" y="44" width="370" height="199.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFE-yG-u6g" userLabel="Background">
-                                        <rect key="frame" x="0.0" y="80" width="370" height="155.5"/>
+                                        <rect key="frame" x="0.0" y="74" width="370" height="125.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="754" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFr-Mq-B9d">
-                                                <rect key="frame" x="20" y="10.5" width="46" height="29"/>
+                                                <rect key="frame" x="20" y="9.5" width="40.5" height="28"/>
                                                 <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="24"/>
                                                 <color key="textColor" red="0.8980392157" green="0.45882352939999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hectares of forests lost each year" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m05-XR-UMm">
-                                                <rect key="frame" x="80" y="15" width="270" height="20"/>
+                                                <rect key="frame" x="74.5" y="15" width="275.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUJ-AY-mTp">
-                                                <rect key="frame" x="80" y="46" width="290" height="1"/>
+                                                <rect key="frame" x="74.5" y="42.5" width="295.5" height="1"/>
                                                 <color key="backgroundColor" red="1" green="0.8862745098" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="jDP-tm-HWK"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="438" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oi-yd-Q4N">
-                                                <rect key="frame" x="19" y="53.5" width="48" height="29"/>
+                                                <rect key="frame" x="20" y="49" width="40.5" height="28"/>
                                                 <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="24"/>
                                                 <color key="textColor" red="0.8980392157" green="0.45882352939999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals wiped out due to habitat loss" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dD-4z-mF3">
-                                                <rect key="frame" x="81" y="58" width="269" height="20"/>
+                                                <rect key="frame" x="74.5" y="54.5" width="275.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhF-bF-f3b">
-                                                <rect key="frame" x="81" y="89" width="289" height="1"/>
+                                                <rect key="frame" x="74.5" y="82" width="295.5" height="1"/>
                                                 <color key="backgroundColor" red="1" green="0.8862745098" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="m4j-WF-WMb"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="246" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xjz-cn-Mxd">
-                                                <rect key="frame" x="19.5" y="106.5" width="47.5" height="29"/>
+                                                <rect key="frame" x="20" y="88.5" width="40.5" height="28"/>
                                                 <fontDescription key="fontDescription" name="InterUI-Bold" family="Inter UI" pointSize="24"/>
                                                 <color key="textColor" red="0.8980392157" green="0.45882352939999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CO2 released from factory and vehicles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymc-85-CqC">
-                                                <rect key="frame" x="80" y="101" width="270" height="39.5"/>
+                                                <rect key="frame" x="74.5" y="94" width="275.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -128,7 +128,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W98-GV-O52" userLabel="Pointer">
-                                        <rect key="frame" x="175" y="70" width="20" height="10"/>
+                                        <rect key="frame" x="175" y="64" width="20" height="10"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="7Kb-eO-NYd"/>
@@ -141,7 +141,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global Warming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-EM-OA1">
-                                        <rect key="frame" x="85" y="30" width="200" height="34"/>
+                                        <rect key="frame" x="99" y="30" width="172" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.30196078430000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                 <viewLayoutGuide key="safeArea" id="dDo-7b-SDQ"/>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAv-Zt-uIt">
-                                <rect key="frame" x="28" y="295.5" width="360" height="44"/>
+                                <rect key="frame" x="28" y="259.5" width="360" height="44"/>
                                 <color key="backgroundColor" red="0.29803921568627451" green="0.64313725490196072" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ZX6-Se-sGe"/>

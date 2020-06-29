@@ -91,8 +91,6 @@ class DaxOnboardingViewController: UIViewController, Onboarding {
         } else if let controller = segue.destination as? OnboardingViewController {
             controller.delegate = self
             controller.updateForDaxOnboarding()
-        } else if segue.identifier == "embed" {
-            segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
         }
         
     }
@@ -113,8 +111,7 @@ class DaxOnboardingViewController: UIViewController, Onboarding {
     }
     
     @IBAction func onTapButton() {
-        let segue = isPad ? "AddToHomeRow-iPad" : "AddToHomeRow"
-        performSegue(withIdentifier: segue, sender: self)
+        onboardingCompleted(controller: self)
     }
     
     func showDaxDialog(completion: @escaping () -> Void) {

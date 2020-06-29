@@ -129,7 +129,7 @@ class MainViewController: UIViewController {
         let showOnboarding = !settings.hasSeenOnboarding ||
             // allow oboarding to forced via environment variable - see scheme
             ProcessInfo.processInfo.environment["ONBOARDING"] == "true"
-        guard !showOnboarding else { return }
+        guard showOnboarding else { return }
 
         let onboardingFlow: String
         let variantManager = DefaultVariantManager()

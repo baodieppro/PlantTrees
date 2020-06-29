@@ -251,6 +251,7 @@ public struct UserText {
 
     public static let onboardingWelcomeHeader = NSLocalizedString("onboardingWelcomeHeader", comment: "Welcome to DuckDuckGo!")
     public static let onboardingContinue = NSLocalizedString("onboardingContinue", comment: "Continue")
+    public static let onboardingNext = NSLocalizedString("onboardingNext", comment: "Next")
     public static let onboardingSkip = NSLocalizedString("onboardingSkip", comment: "Skip")
     public static let onboardingStartBrowsing = NSLocalizedString("onboardingStartBrowsing", comment: "Start browsing")
     public static let onboardingSetAppIcon = NSLocalizedString("onboardingSetAppIcon", comment: "Set App Icon")

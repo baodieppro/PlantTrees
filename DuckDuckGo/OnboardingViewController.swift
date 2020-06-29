@@ -22,10 +22,8 @@ import Core
 
 class OnboardingViewController: UIViewController, Onboarding {
     
-    var controllerNames = ["onboardingSummary", "onboardingHomeRow"]
-    
-    @IBOutlet weak var subheader: UILabel!
-    @IBOutlet weak var contentWidth: NSLayoutConstraint!
+    var controllerNames = ["onboardingHomeRow", "onboardingSummary"]
+
     @IBOutlet weak var contentContainer: UIView!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
@@ -40,7 +38,6 @@ class OnboardingViewController: UIViewController, Onboarding {
         super.viewDidLoad()
         Pixel.fire(pixel: .onboardingShown)
         loadInitialContent()
-        updateForSmallerScreens()
     }
     
     private func loadInitialContent() {
@@ -57,10 +54,6 @@ class OnboardingViewController: UIViewController, Onboarding {
         prepareFor(nextScreen: controller)
     }
     
-    private func updateForSmallerScreens() {
-        contentWidth.constant = isSmall ? -52 : -72
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let controller = segue.destination as? OnboardingContentViewController else {
             fatalError("destination controller is not \(OnboardingContentViewController.self)")
@@ -72,7 +65,6 @@ class OnboardingViewController: UIViewController, Onboarding {
         controller.delegate = self
         continueButton.isEnabled = controller.canContinue
         contentController = controller
-        subheader.setAttributedTextString(controller.subtitle ?? "")
     }
     
     @IBAction func next(sender: UIButton) {
@@ -105,7 +97,6 @@ class OnboardingViewController: UIViewController, Onboarding {
         addChild(newController)
         transition(from: oldController, to: newController, duration: 0.6, options: [], animations: {
             
-            self.subheader.alpha = 0.0
             oldController.view.center.x -= frame.width * 1.0
             newController.view.center.x = frame.midX
             
@@ -115,16 +106,9 @@ class OnboardingViewController: UIViewController, Onboarding {
             newController.didMove(toParent: self)
             self.contentContainer.addSubview(newController.view)
             self.updateContent(newController)
-            self.animateInHeaders()
         })
         
         prepareFor(nextScreen: newController)
-    }
-    
-    private func animateInHeaders() {
-        UIView.animate(withDuration: 0.3) {
-            self.subheader.alpha = 1.0
-        }
     }
     
     private func prepareFor(nextScreen: OnboardingContentViewController) {
