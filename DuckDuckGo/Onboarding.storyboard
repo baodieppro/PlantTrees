@@ -19,7 +19,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="UVH-Ao-f7j">
             <objects>
-                <viewController id="X59-2u-JR5" customClass="OnboardingViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X59-2u-JR5" customClass="OnboardingViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R3B-sO-IVB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@ example.</string>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="316" id="poA-Sb-4vN"/>
                                 </constraints>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEn-eD-MPB" userLabel="Continue Button" customClass="RoundedRectangleView" customModule="DuckDuckGo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEn-eD-MPB" userLabel="Continue Button" customClass="RoundedRectangleView" customModule="PlantTrees" customModuleProvider="target">
                                 <rect key="frame" x="30" y="762" width="354" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-pA-ovS">
@@ -88,7 +88,7 @@ example.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-Qk-FSX">
-                                <rect key="frame" x="30" y="822" width="354" height="32"/>
+                                <rect key="frame" x="30" y="823" width="354" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="Skip"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +133,7 @@ example.</string>
         <!--Protecting your data has never been this easy.-->
         <scene sceneID="bMq-YW-WMP">
             <objects>
-                <viewController storyboardIdentifier="onboardingSummary" id="BE3-5Z-b0k" customClass="OnboardingSummaryViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingSummary" id="BE3-5Z-b0k" customClass="OnboardingSummaryViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <string key="title">Protecting your data has
 never been this easy.</string>
                     <view key="view" contentMode="scaleToFill" id="dL0-QB-QdX">
@@ -166,12 +166,12 @@ never been this easy.</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fod-w3-gP6">
-                                                                <rect key="frame" x="0.0" y="21.666666666666661" width="238" height="36.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="21.666666666666668" width="238" height="38.666666666666657"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Block trackers and browse securely by default.">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                                            <font key="NSFont" metaFont="menu" size="14"/>
                                                                             <font key="NSOriginalFont" metaFont="system" size="15"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -211,12 +211,12 @@ never been this easy.</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSm-34-3X7">
-                                                                <rect key="frame" x="0.0" y="21.666666666666675" width="238" height="36.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="21.666666666666668" width="238" height="38.666666666666657"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="With DuckDuckGo, your searches are always private.">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                                            <font key="NSFont" metaFont="menu" size="14"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -255,12 +255,12 @@ never been this easy.</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyY-fx-NQs">
-                                                                <rect key="frame" x="0.0" y="21.666666666666661" width="238" height="36.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="21.666666666666654" width="238" height="38.666666666666657"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Erase your browsing data with the tap of a button.">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                                            <font key="NSFont" metaFont="menu" size="14"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -299,12 +299,12 @@ never been this easy.</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-CW-jNw">
-                                                                <rect key="frame" x="0.0" y="21.666666666666661" width="240" height="36.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="21.666666666666654" width="240" height="38.666666666666657"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Pick a theme and customize privacy features.">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                                            <font key="NSFont" metaFont="menu" size="14"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -354,7 +354,7 @@ never been this easy.</string>
         <!--Turn on notifications to receive important updates about your privacy.-->
         <scene sceneID="mnE-ri-bSO">
             <objects>
-                <viewController storyboardIdentifier="onboardingNotifications" title="Turn on notifications to receive important updates about your privacy." id="CKX-vY-82l" customClass="OnboardingNotificationsViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingNotifications" title="Turn on notifications to receive important updates about your privacy." id="CKX-vY-82l" customClass="OnboardingNotificationsViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zDS-dL-1cb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,7 +396,7 @@ never been this easy.</string>
         <!--Search and browse privately, every day.-->
         <scene sceneID="Yxp-L7-vF3">
             <objects>
-                <viewController storyboardIdentifier="onboardingHomeRow" id="Xjr-gI-tDG" customClass="OnboardingHomeRowViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingHomeRow" id="Xjr-gI-tDG" customClass="OnboardingHomeRowViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <string key="title">Search and browse privately,
 every day.</string>
                     <view key="view" contentMode="scaleToFill" id="VId-rQ-yCx">
@@ -406,7 +406,7 @@ every day.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nh7-i9-URZ" userLabel="Container">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8a-8P-yOi" userLabel="Video Container View" customClass="VideoContainerView" customModule="DuckDuckGo" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8a-8P-yOi" userLabel="Video Container View" customClass="VideoContainerView" customModule="PlantTrees" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>

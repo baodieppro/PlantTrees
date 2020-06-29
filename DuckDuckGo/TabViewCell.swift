@@ -33,7 +33,7 @@ class TabViewCell: UICollectionViewCell {
 
     struct Constants {
         
-        static let selectedBorderWidth: CGFloat = 2.0
+        static let selectedBorderWidth: CGFloat = 4.0
         static let unselectedBorderWidth: CGFloat = 0.0
         static let selectedAlpha: CGFloat = 1.0
         static let unselectedAlpha: CGFloat = 0.92

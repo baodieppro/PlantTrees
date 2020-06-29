@@ -359,7 +359,7 @@ extension OmniBar: Themable {
         clearButton.tintColor = theme.searchBarClearTextIconColor
 
         searchLoupe.tintColor = theme.barTintColor
-        cancelButton.setTitleColor(theme.barTintColor, for: .normal)
+        cancelButton.setTitleColor(theme.navigationBarTintColor, for: .normal)
         
         updateSearchBarBorder()
     }

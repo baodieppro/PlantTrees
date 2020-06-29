@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Inter-UI-Medium.otf">
+            <string>InterUI-Medium</string>
+        </array>
         <array key="Inter-UI-Regular.otf">
             <string>InterUI-Regular</string>
         </array>
@@ -39,42 +42,53 @@
         <scene sceneID="rqJ-jV-QgT">
             <objects>
                 <tableViewController id="aqL-Wl-TTD" customClass="BookmarksViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="V5q-dM-Log">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="V5q-dM-Log">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkCell" id="hZu-lD-OW9" customClass="BookmarkCell" customModule="PlantTrees" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZu-lD-OW9" id="U5R-CU-wvT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3ek-Y2-ync">
-                                            <rect key="frame" x="16" y="14" width="343" height="16"/>
+                                            <rect key="frame" x="16" y="12" width="343" height="36.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GlobeSmall" translatesAutoresizingMaskIntoConstraints="NO" id="V04-QV-7fc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GlobeSmall" translatesAutoresizingMaskIntoConstraints="NO" id="V04-QV-7fc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="22" height="36.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="16" id="ayR-02-xPw"/>
-                                                        <constraint firstAttribute="height" constant="16" id="z3n-aR-JsM"/>
+                                                        <constraint firstAttribute="width" constant="22" id="ayR-02-xPw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqe-Wh-Evj">
-                                                    <rect key="frame" x="28" y="0.0" width="315" height="16"/>
-                                                    <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="16"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NDD-pM-0XD">
+                                                    <rect key="frame" x="34" y="0.0" width="309" height="36.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqe-Wh-Evj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="InterUI-Medium" family="Inter UI" pointSize="16"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAe-Sk-if2">
+                                                            <rect key="frame" x="0.0" y="21.5" width="309" height="15"/>
+                                                            <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="12"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="3ek-Y2-ync" secondAttribute="trailing" id="ATh-Rk-awj"/>
+                                        <constraint firstItem="3ek-Y2-ync" firstAttribute="top" secondItem="U5R-CU-wvT" secondAttribute="top" constant="12" id="EPm-um-uld"/>
                                         <constraint firstItem="3ek-Y2-ync" firstAttribute="leading" secondItem="U5R-CU-wvT" secondAttribute="leadingMargin" id="J2q-Ow-1pC"/>
+                                        <constraint firstAttribute="bottom" secondItem="3ek-Y2-ync" secondAttribute="bottom" constant="12" id="d4O-jK-Fof"/>
                                         <constraint firstItem="3ek-Y2-ync" firstAttribute="centerY" secondItem="U5R-CU-wvT" secondAttribute="centerY" id="mbl-tM-JdY"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -82,10 +96,11 @@
                                 <connections>
                                     <outlet property="linkImage" destination="V04-QV-7fc" id="fJG-Cz-Hoi"/>
                                     <outlet property="title" destination="Lqe-Wh-Evj" id="3DO-GY-42U"/>
+                                    <outlet property="urlLink" destination="WAe-Sk-if2" id="Yob-Wu-ItG"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoBookmarskCell" id="WYR-Zy-nVI" userLabel="Empty" customClass="NoBookmarksCell" customModule="PlantTrees" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="99" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="88.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WYR-Zy-nVI" id="WV9-kt-rsa">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>

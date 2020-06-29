@@ -27,7 +27,8 @@ class BookmarkCell: UITableViewCell {
 
     @IBOutlet weak var linkImage: UIImageView!
     @IBOutlet weak var title: UILabel!
-
+    @IBOutlet weak var urlLink: UILabel!
+    
     var link: Link? {
         didSet {
             if let linkTitle = link?.title?.trimWhitespace(), !linkTitle.isEmpty {
@@ -36,6 +37,7 @@ class BookmarkCell: UITableViewCell {
                 title.text = link?.url.host?.dropPrefix(prefix: "www.") ?? ""
             }
             linkImage.loadFavicon(forDomain: link?.url.host)
+            urlLink.text = link?.url.absoluteString ?? ""
         }
     }
 

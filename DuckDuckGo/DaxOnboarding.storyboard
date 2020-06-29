@@ -16,7 +16,7 @@
         <!--Dax Onboarding View Controller-->
         <scene sceneID="8Y2-Tw-v4h">
             <objects>
-                <viewController id="YXw-O5-LLS" customClass="DaxOnboardingViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YXw-O5-LLS" customClass="DaxOnboardingViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IfD-pB-0T8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,9 +156,9 @@ DuckDuckGo!</string>
         <!--Dax Dialog View Controller-->
         <scene sceneID="fPO-6e-MDt">
             <objects>
-                <viewController storyboardIdentifier="DaxDialog" id="UUS-R7-a2i" customClass="DaxDialogViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DaxDialog" id="UUS-R7-a2i" customClass="DaxDialogViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="im0-JF-Sin">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DaxIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-6y-Vfa">
@@ -169,7 +169,7 @@ DuckDuckGo!</string>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ix6-dq-RAh" userLabel="Background">
-                                <rect key="frame" x="10" y="82" width="355" height="113"/>
+                                <rect key="frame" x="10" y="82" width="355" height="318"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-rv-vek">
                                         <rect key="frame" x="16" y="10" width="323" height="26"/>
@@ -188,7 +188,7 @@ DuckDuckGo!</string>
                                         </connections>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJt-F9-L48">
-                                        <rect key="frame" x="16" y="45" width="323" height="44"/>
+                                        <rect key="frame" x="16" y="250" width="323" height="44"/>
                                         <color key="backgroundColor" red="0.40392156862745099" green="0.5607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Gta-qP-xcx"/>
@@ -273,7 +273,7 @@ DuckDuckGo!</string>
         <!--Fullscreen Dax Dialog View Controller-->
         <scene sceneID="EiG-Cq-xtD">
             <objects>
-                <viewController storyboardIdentifier="FullscreenDaxDialog" id="yGQ-WA-daz" customClass="FullscreenDaxDialogViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FullscreenDaxDialog" id="yGQ-WA-daz" customClass="FullscreenDaxDialogViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ica-YY-s5f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,7 +297,7 @@ DuckDuckGo!</string>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgy-75-OvJ">
-                                <rect key="frame" x="356" y="116" width="34" height="32"/>
+                                <rect key="frame" x="356" y="116" width="34" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Hide"/>
@@ -349,7 +349,7 @@ DuckDuckGo!</string>
         <!--Dax Onboarding Pad View Controller-->
         <scene sceneID="H80-CE-ohe">
             <objects>
-                <viewController id="V3g-Ms-vCf" customClass="DaxOnboardingPadViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V3g-Ms-vCf" customClass="DaxOnboardingPadViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Np-n8-WVJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,11 +387,11 @@ DuckDuckGo!</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Z8u-vf-YsD"/>
+        <segue reference="WM8-Xy-pab"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DaxIcon" width="86" height="86"/>
         <image name="Lighthouse" width="360" height="724"/>
-        <image name="Logo" width="128" height="128"/>
+        <image name="Logo" width="220" height="220"/>
     </resources>
 </document>

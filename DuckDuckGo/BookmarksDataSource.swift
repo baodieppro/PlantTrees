@@ -83,6 +83,7 @@ class BookmarksDataSource: NSObject, UITableViewDataSource {
         let theme = ThemeManager.shared.currentTheme
         cell.backgroundColor = theme.tableCellBackgroundColor
         cell.title.textColor = theme.tableCellTextColor
+        cell.urlLink.textColor = theme.placeholderColor
         cell.setHighlightedStateBackgroundColor(theme.tableCellHighlightedBackgroundColor)
         
         return cell
