@@ -22,12 +22,13 @@ import Core
 import EasyTipView
 import UserNotifications
 import os.log
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private struct ShortcutKey {
-        static let clipboard = "com.duckduckgo.mobile.ios.clipboard"
+        static let clipboard = "com.planttrees.eco.clipboard"
     }
     
     static var shared: AppDelegate {
@@ -49,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: lifecycle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
         testing = ProcessInfo().arguments.contains("testing")
         if testing {
             Database.shared.loadStore { _ in }

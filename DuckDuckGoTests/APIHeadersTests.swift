@@ -26,14 +26,14 @@ class APIHeadersTests: XCTestCase {
 
     func testWhenHeadersRequestedThenHeadersContainUserAgent() {
         let testee = APIHeaders(appVersion: appVersion())
-        let expected = "ddg_ios/7.0.4.5 (com.duckduckgo.mobile.ios; iOS \(UIDevice.current.systemVersion))"
+        let expected = "ddg_ios/7.0.4.5 (com.planttrees.eco; iOS \(UIDevice.current.systemVersion))"
         let actual = testee.defaultHeaders[APIHeaders.Name.userAgent]
         XCTAssertEqual(expected, actual)
     }
 
     func appVersion() -> AppVersion {
         let mockBundle = MockBundle()
-        mockBundle.add(name: AppVersion.Keys.identifier, value: "com.duckduckgo.mobile.ios")
+        mockBundle.add(name: AppVersion.Keys.identifier, value: "com.planttrees.eco")
         mockBundle.add(name: AppVersion.Keys.versionNumber, value: "7.0.4")
         mockBundle.add(name: AppVersion.Keys.buildNumber, value: "5")
         return AppVersion(bundle: mockBundle)

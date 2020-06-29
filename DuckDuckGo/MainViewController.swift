@@ -56,7 +56,6 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var logoContainer: UIView!
     @IBOutlet weak var logo: UIImageView!
-    @IBOutlet weak var logoText: UIImageView!
 
     weak var notificationView: NotificationView?
 
@@ -1176,8 +1175,6 @@ extension MainViewController: Themable {
         tabManager.decorate(with: theme)
 
         findInPageView.decorate(with: theme)
-        
-        logoText.tintColor = theme.ddgTextTintColor
     }
     
 }

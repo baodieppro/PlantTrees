@@ -29,7 +29,7 @@ class NetworkLeaderboard {
         
         // Increment this to cause a reset on startup (e.g. if we know the TDS has changed significantly)
         static let dataVersion = 1
-        static let dataVersionKey = "com.duckduckgo.mobile.ios.networkleaderboard.dataversion"
+        static let dataVersionKey = "com.planttrees.eco.networkleaderboard.dataversion"
         
     }
     

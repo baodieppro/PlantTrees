@@ -31,7 +31,7 @@ struct LightTheme: Theme {
     
     var keyboardAppearance: UIKeyboardAppearance = .light
     
-    var backgroundColor = UIColor.nearlyWhite
+    var backgroundColor = UIColor.white
     
     var barBackgroundColor = UIColor.nearlyWhiteLight
     var barTintColor = UIColor.nearlyBlackLight
@@ -42,7 +42,7 @@ struct LightTheme: Theme {
     var tintOnBlurColor = UIColor.white
     
     var searchBarBackgroundColor = UIColor.lightGreyish
-    var centeredSearchBarBackgroundColor = UIColor.mercury
+    var centeredSearchBarBackgroundColor = UIColor.white
     var searchBarTextColor = UIColor.nearlyBlackLight
     var searchBarTextPlaceholderColor = UIColor.greyish3
     var searchBarTextDeemphasisColor = UIColor.greyish3

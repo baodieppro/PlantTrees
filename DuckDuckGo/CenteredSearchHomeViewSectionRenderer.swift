@@ -79,7 +79,7 @@ class CenteredSearchHomeViewSectionRenderer: HomeViewSectionRenderer {
             self.cell?.alpha = 0.0
             if let controller = self.controller?.parent,
                 let targetFrame = self.cell?.imageView.superview?.convert(self.cell?.imageView.frame ?? .zero, to: controller.view) {
-                let logo = UIImageView(image: UIImage(named: "Logo"))
+                let logo = UIImageView(image: UIImage(named: "plant-trees-logo"))
 
                 logo.frame = targetFrame
                 logo.center = controller.view.center

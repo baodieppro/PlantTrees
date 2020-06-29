@@ -198,7 +198,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Paste from clipboard</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.duckduckgo.mobile.ios.clipboard</string>
+			<string>com.planttrees.eco.clipboard</string>
 		</dict>
 	</array>
 	<key>UIApplicationShortcutWidget</key>

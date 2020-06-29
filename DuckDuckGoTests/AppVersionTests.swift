@@ -26,7 +26,7 @@ class AppVersionTests: XCTestCase {
         static let name = "DuckDuckGo"
         static let version = "2.0.4"
         static let build = "14"
-        static let identifier = "com.duckduckgo.mobile.ios"
+        static let identifier = "com.planttrees.eco"
     }
 
     private var mockBundle: MockBundle!

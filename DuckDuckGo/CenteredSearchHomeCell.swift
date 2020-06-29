@@ -106,8 +106,10 @@ extension CenteredSearchHomeCell: Themable {
         updateForTransition()
         
         searchBackground.backgroundColor = theme.centeredSearchBarBackgroundColor
-        searchLoupe.tintColor = theme.barTintColor
+        searchLoupe.tintColor = theme.tableCellAccessoryColor
         
         promptText.textColor = theme.searchBarTextPlaceholderColor
+        
+        searchBackground.layer.borderColor = theme.searchBarBorderColor.cgColor
     }
 }
