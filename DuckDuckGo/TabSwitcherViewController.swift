@@ -22,6 +22,47 @@ import Core
 import WebKit
 import os.log
 
+@IBDesignable
+class MyToolBar: UIToolbar {
+    private var shapeLayer: CALayer?
+    private func addShape() {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = createPath()
+        shapeLayer.fillColor = UIColor.white.cgColor
+
+        if let oldShapeLayer = self.shapeLayer {
+            self.layer.replaceSublayer(oldShapeLayer, with: shapeLayer)
+        } else {
+            self.layer.insertSublayer(shapeLayer, at: 0)
+        }
+        self.shapeLayer = shapeLayer
+    }
+    override func draw(_ rect: CGRect) {
+        self.addShape()
+    }
+    func createPath() -> CGPath {
+        let height: CGFloat = 37.0
+        let path = UIBezierPath()
+        let centerWidth = self.frame.width / 2
+        path.move(to: CGPoint(x: 0, y: 0)) // start top left
+        path.addLine(to: CGPoint(x: (centerWidth - 30), y: 0)) // the beginning of the trough
+
+        path.addCurve(to: CGPoint(x: centerWidth, y: height),
+        controlPoint1: CGPoint(x: (centerWidth - 15), y: 0), controlPoint2: CGPoint(x: centerWidth - 15, y: height))
+
+        path.addCurve(to: CGPoint(x: (centerWidth + 30), y: 0),
+        controlPoint1: CGPoint(x: centerWidth + 15, y: height), controlPoint2: CGPoint(x: (centerWidth + 15), y: 0))
+
+        path.addLine(to: CGPoint(x: self.frame.width, y: 0))
+        path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
+        path.addLine(to: CGPoint(x: 0, y: self.frame.height))
+        path.close()
+
+        return path.cgPath
+    }
+
+}
+
 class TabSwitcherViewController: UIViewController {
     
     struct Constants {
@@ -42,7 +83,7 @@ class TabSwitcherViewController: UIViewController {
     
     @IBOutlet weak var fireButton: UIBarButtonItem!
     @IBOutlet weak var doneButton: UIBarButtonItem!
-    @IBOutlet weak var plusButton: UIBarButtonItem!
+    @IBOutlet weak var plusButton: UIButton!
     
     weak var homePageSettingsDelegate: HomePageSettingsDelegate?
     weak var delegate: TabSwitcherDelegate!
@@ -200,11 +241,11 @@ class TabSwitcherViewController: UIViewController {
         Pixel.fire(pixel: .settingsOpenedFromTabsSwitcher)
     }
 
-    @IBAction func onAddPressed(_ sender: UIBarButtonItem) {
+    @IBAction func onAddPressed(_ sender: Any) {
         delegate.tabSwitcherDidRequestNewTab(tabSwitcher: self)
         dismiss()
     }
-
+    
     @IBAction func onDonePressed(_ sender: UIBarButtonItem) {
         dismiss()
     }
@@ -373,7 +414,7 @@ extension TabSwitcherViewController: TabObserver {
 extension TabSwitcherViewController: Themable {
     
     func decorate(with theme: Theme) {
-        view.backgroundColor = theme.backgroundColor
+        view.backgroundColor = theme.searchBarBackgroundColor
         
         titleView.textColor = theme.barTintColor
         settingsButton.tintColor = theme.barTintColor
@@ -381,6 +422,9 @@ extension TabSwitcherViewController: Themable {
         
         toolbar.barTintColor = theme.barBackgroundColor
         toolbar.tintColor = theme.barTintColor
+        
+        plusButton.tintColor = UIColor.white
+        plusButton.backgroundColor = theme.navigationBarTintColor
         
         collectionView.reloadData()
     }

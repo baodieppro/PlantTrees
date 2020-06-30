@@ -108,7 +108,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GE-Nf-lKM">
-                                                            <rect key="frame" x="36" y="13" width="261" height="15.333333333333336"/>
+                                                            <rect key="frame" x="36" y="11.333333333333332" width="261" height="15.333333333333332"/>
                                                             <accessibility key="accessibilityConfiguration">
                                                                 <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                                 <bool key="isElement" value="YES"/>
@@ -133,8 +133,8 @@
                                                         <constraint firstItem="Gyy-py-IOg" firstAttribute="centerY" secondItem="ucs-Dd-y53" secondAttribute="centerY" constant="7" id="FB6-bG-p5f"/>
                                                         <constraint firstAttribute="bottom" secondItem="iu2-rk-hOZ" secondAttribute="bottom" id="FtQ-fl-Drb"/>
                                                         <constraint firstItem="G2C-qh-g3T" firstAttribute="leading" secondItem="1GE-Nf-lKM" secondAttribute="trailing" id="It8-W3-QMz"/>
-                                                        <constraint firstItem="1GE-Nf-lKM" firstAttribute="top" secondItem="puo-AS-QV7" secondAttribute="top" constant="13" id="JfL-bR-9EK"/>
                                                         <constraint firstItem="iu2-rk-hOZ" firstAttribute="leading" secondItem="puo-AS-QV7" secondAttribute="leading" id="Lay-Q3-CNq"/>
+                                                        <constraint firstItem="1GE-Nf-lKM" firstAttribute="centerY" secondItem="ucs-Dd-y53" secondAttribute="centerY" id="NUy-lr-7cC"/>
                                                         <constraint firstItem="Gyy-py-IOg" firstAttribute="centerX" secondItem="ucs-Dd-y53" secondAttribute="centerX" constant="7" id="Sj1-BA-6cV"/>
                                                         <constraint firstItem="G2C-qh-g3T" firstAttribute="top" secondItem="puo-AS-QV7" secondAttribute="top" id="Xgy-LU-aab"/>
                                                         <constraint firstAttribute="trailing" secondItem="G2C-qh-g3T" secondAttribute="trailing" id="ZhN-JG-uru"/>
@@ -188,38 +188,57 @@
                                     <outlet property="delegate" destination="G9p-Sf-e96" id="GK9-W4-6gs"/>
                                 </connections>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrD-ff-flI">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrD-ff-flI" customClass="MyToolBar" customModule="PlantTrees" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="BUt-3S-Yua"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="done" id="S1O-aT-Bgw">
+                                    <barButtonItem title="Home" image="Home" width="70" id="E1g-Bc-bOW">
                                         <connections>
-                                            <action selector="onDonePressed:" destination="G9p-Sf-e96" id="yns-QI-PSf"/>
+                                            <action selector="onFirePressed" destination="G9p-Sf-e96" id="vnk-g4-Lje"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="C3E-Kk-DYK"/>
-                                    <barButtonItem title="Erase Tabs and Data" image="Fire" id="h1S-c2-Spf">
-                                        <inset key="imageInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <barButtonItem title="Clear Data" image="Fire" width="70" id="h1S-c2-Spf">
                                         <connections>
                                             <action selector="onFirePressed" destination="G9p-Sf-e96" id="nP6-t4-jHf"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HfR-Gz-m0R"/>
+                                    <barButtonItem title="Clear Data" image="Fire" width="70" id="4lN-zw-Yci"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="MHa-87-9H2"/>
-                                    <barButtonItem title="New Tab" image="NewTab" id="nYf-xs-PE7">
-                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Add"/>
-                                        </userDefinedRuntimeAttributes>
+                                    <barButtonItem title="Bookmark all" image="AddBookmarks" width="70" id="ACK-ar-Nmb">
                                         <connections>
-                                            <action selector="onAddPressed:" destination="G9p-Sf-e96" id="DNG-FQ-8Bn"/>
+                                            <action selector="onFirePressed" destination="G9p-Sf-e96" id="DGw-Re-pfl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FxR-7Y-Sxy"/>
+                                    <barButtonItem width="70" systemItem="done" id="S1O-aT-Bgw">
+                                        <connections>
+                                            <action selector="onDonePressed:" destination="G9p-Sf-e96" id="yns-QI-PSf"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-m0-vLw">
+                                <rect key="frame" x="185" y="692" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.29803921570000003" green="0.64313725489999995" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eLs-m0-vLw" secondAttribute="height" multiplier="1:1" id="bBJ-lW-4WO"/>
+                                </constraints>
+                                <state key="normal" image="Add"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAddPressed:" destination="G9p-Sf-e96" eventType="touchUpInside" id="k5A-Ni-QqC"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-nO-H3f">
                                 <rect key="frame" x="10" y="9" width="34" height="34"/>
                                 <accessibility key="accessibilityConfiguration" label="Add all tabs as bookmarks"/>
@@ -237,14 +256,17 @@
                         <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Nqt-nV-6p2" firstAttribute="bottom" secondItem="PrD-ff-flI" secondAttribute="bottom" id="0oA-Ll-zZd"/>
+                            <constraint firstItem="eLs-m0-vLw" firstAttribute="height" secondItem="PrD-ff-flI" secondAttribute="height" id="1rx-Dm-IMa"/>
                             <constraint firstItem="XZT-ek-lrC" firstAttribute="leading" secondItem="Nqt-nV-6p2" secondAttribute="leading" id="2c3-VD-tFG"/>
                             <constraint firstItem="PrD-ff-flI" firstAttribute="leading" secondItem="WJ0-lP-E4v" secondAttribute="leading" id="B4L-BE-vvi"/>
                             <constraint firstAttribute="trailing" secondItem="PrD-ff-flI" secondAttribute="trailing" id="BaM-0l-RFS"/>
                             <constraint firstItem="Cy7-Lb-veV" firstAttribute="centerX" secondItem="Nqt-nV-6p2" secondAttribute="centerX" id="CZo-Zg-g4J"/>
                             <constraint firstItem="2aH-nO-H3f" firstAttribute="leading" secondItem="Nqt-nV-6p2" secondAttribute="leading" constant="10" id="IuL-gt-D87"/>
                             <constraint firstItem="PrD-ff-flI" firstAttribute="top" secondItem="XZT-ek-lrC" secondAttribute="bottom" id="J8G-Xc-ZM0"/>
+                            <constraint firstItem="eLs-m0-vLw" firstAttribute="centerX" secondItem="PrD-ff-flI" secondAttribute="centerX" id="MEp-BS-SGb"/>
                             <constraint firstItem="L7l-vl-rDZ" firstAttribute="centerY" secondItem="Cy7-Lb-veV" secondAttribute="centerY" id="ceJ-FA-nQB"/>
                             <constraint firstItem="XZT-ek-lrC" firstAttribute="top" secondItem="Cy7-Lb-veV" secondAttribute="bottom" constant="18" id="dJv-kk-vTH"/>
+                            <constraint firstItem="eLs-m0-vLw" firstAttribute="top" secondItem="PrD-ff-flI" secondAttribute="top" id="g72-Sj-oB2"/>
                             <constraint firstItem="2aH-nO-H3f" firstAttribute="centerY" secondItem="Cy7-Lb-veV" secondAttribute="centerY" id="gF9-g1-aML"/>
                             <constraint firstItem="Nqt-nV-6p2" firstAttribute="trailing" secondItem="L7l-vl-rDZ" secondAttribute="trailing" constant="5" id="moD-HB-CMD"/>
                             <constraint firstItem="Nqt-nV-6p2" firstAttribute="trailing" secondItem="XZT-ek-lrC" secondAttribute="trailing" id="pZH-4b-XAH"/>
@@ -257,7 +279,7 @@
                         <outlet property="collectionView" destination="XZT-ek-lrC" id="iNF-Uj-4dl"/>
                         <outlet property="doneButton" destination="S1O-aT-Bgw" id="8I7-gH-bhZ"/>
                         <outlet property="fireButton" destination="h1S-c2-Spf" id="VfW-9h-WGv"/>
-                        <outlet property="plusButton" destination="nYf-xs-PE7" id="9pP-uN-hsa"/>
+                        <outlet property="plusButton" destination="eLs-m0-vLw" id="3qP-fy-7YT"/>
                         <outlet property="settingsButton" destination="L7l-vl-rDZ" id="rFL-vJ-fSE"/>
                         <outlet property="titleView" destination="Cy7-Lb-veV" id="p6U-i5-pwf"/>
                         <outlet property="toolbar" destination="PrD-ff-flI" id="6c2-zx-gsM"/>
@@ -277,10 +299,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="24" height="24"/>
         <image name="AddBookmarks" width="24" height="24"/>
-        <image name="Fire" width="19" height="24"/>
+        <image name="Fire" width="22" height="20"/>
         <image name="GlobeSmall" width="24" height="24"/>
-        <image name="NewTab" width="24" height="24"/>
+        <image name="Home" width="20" height="20"/>
         <image name="Remove" width="24" height="24"/>
         <image name="Settings" width="24" height="24"/>
         <image name="TabUnread" width="24" height="24"/>

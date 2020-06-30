@@ -1,0 +1,7 @@
+.DS_Store
+submodules
+Carthage
+DuckDuckGo.xcodeproj/project.xcworkspace/xcuserdata
+DuckDuckGo.xcodeproj/xcuserdata
+Pods
+DuckDuckGo.xcworkspace/xcuserdata
