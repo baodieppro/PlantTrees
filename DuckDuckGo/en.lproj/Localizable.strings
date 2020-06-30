@@ -187,10 +187,10 @@
 "keyCommandClose" = "Close";
 "keyCommandSelect" = "Select";
 
-"contextualOnboardingSearchPrivately" = "Your searches are always private on DuckDuckGo.";
+"contextualOnboardingSearchPrivately" = "You search the web, we plant trees. Save our Planet.";
 "contextualOnboardingCustomizeTheme" = "Want a different look? Try changing the theme!";
-"contextualOnboardingPrivacyGrade" = "DuckDuckGo enhances your privacy as you browse. Tap the privacy grade icon to learn how.";
-"contextualOnboardingFireButton" = "Tap the flame icon to erase your tabs and browsing data, or make it automatic in settings.";
+"contextualOnboardingPrivacyGrade" = "PlantTrees enhances your privacy as you browse. Tap the privacy grade icon to learn how.";
+"contextualOnboardingFireButton" = "Tap the yellow leaf icon to erase your tabs and browsing data, or make it automatic in settings.";
 
 "bookmarkAll.tabs.notfound" = "No tabs to bookmark";
 "bookmarkAll.tabs.saved" = "All tabs bookmarked";
@@ -324,12 +324,12 @@
 "homeTab.searchAndFavorites" = "Search and favorites in a new tab";
 "homeTab.title" = "Home";
 
-"dax.onboarding.home.initial" = "Next, try visiting one of your favorite sites!\n\nI’ll block trackers so they can’t spy on you. I’ll also upgrade the security of your connection if possible. 🔒";
+"dax.onboarding.home.initial" = "Search the web, save the Earth.\n\nWe use 80% profit we make from your searches to plant trees where they are needed most. On average, we need around 45 searches from you to plant a tree.";
 
 "dax.onboarding.home.subsequent" = "You’ve got this!\n\nRemember: every time you browse with me a creepy ad loses its wings. 👍";
 
-"dax.onboarding.browsing.after.search" = "Your DuckDuckGo searches are anonymous and I never store your search history.  Ever. 🙌";
-"dax.onboarding.browsing.after.search.cta" = "Phew!";
+"dax.onboarding.browsing.after.search" = "Make a difference every day.\nOn avarage, 45 searches from you plant 1 tree.";
+"dax.onboarding.browsing.after.search.cta" = "Act for the future";
 
 "dax.onboarding.browsing.without.trackers" = "As you tap and scroll, I'll block pesky trackers.\n\nGo head - keep browsing!";
 "dax.onboarding.browsing.without.trackers.cta" = "Got It";

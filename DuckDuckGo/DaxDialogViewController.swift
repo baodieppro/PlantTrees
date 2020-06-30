@@ -130,7 +130,7 @@ class DaxDialogViewController: UIViewController {
     
     private func attributedString(from string: String) -> NSAttributedString {
         let theme = self.theme ?? ThemeManager.shared.currentTheme
-        return string.attributedStringFromMarkdown(color: theme.daxDialogTextColor, fontSize: isSmall ? 16 : 18)
+        return string.attributedStringFromMarkdown(color: theme.daxDialogTextColor, fontSize: isSmall ? 14 : 16)
     }
      
 }

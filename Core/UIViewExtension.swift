@@ -65,7 +65,7 @@ extension UIView {
         layer.shadowColor = UIColor.darkGray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 1.5)
         layer.shadowOpacity = 0.2
-        layer.shadowRadius = 1.5
+        layer.shadowRadius = 5
     }
 
     public func clearSubviews() {
