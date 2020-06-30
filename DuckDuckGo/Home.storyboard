@@ -239,6 +239,7 @@
                         <outlet property="daxDialogContainer" destination="3ms-eB-DjL" id="ZC4-JT-yTi"/>
                         <outlet property="daxDialogContainerHeight" destination="E7k-RF-RsZ" id="oGk-WJ-UXB"/>
                         <outlet property="settingsButton" destination="kcN-YB-mZi" id="iyr-9W-6gY"/>
+                        <outlet property="yourTreeCount" destination="kBP-XH-ePA" id="5TL-9A-J2h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtg-6j-Bq6" userLabel="First Responder" sceneMemberID="firstResponder"/>

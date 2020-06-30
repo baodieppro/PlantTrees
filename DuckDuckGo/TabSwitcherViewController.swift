@@ -28,7 +28,7 @@ class MyToolBar: UIToolbar {
     private func addShape() {
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = createPath()
-        shapeLayer.fillColor = UIColor(white: 1, alpha: 0.7).cgColor
+        shapeLayer.fillColor = barTintColor!.cgColor
 
         if let oldShapeLayer = self.shapeLayer {
             self.layer.replaceSublayer(oldShapeLayer, with: shapeLayer)
@@ -37,9 +37,12 @@ class MyToolBar: UIToolbar {
         }
         self.shapeLayer = shapeLayer
     }
+    
+
     override func draw(_ rect: CGRect) {
         self.addShape()
     }
+
     func createPath() -> CGPath {
         let height: CGFloat = 37.0
         let path = UIBezierPath()
@@ -83,6 +86,7 @@ class TabSwitcherViewController: UIViewController {
     @IBOutlet weak var fireButton: UIBarButtonItem!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var bottomFiller: UIView!
     
     weak var homePageSettingsDelegate: HomePageSettingsDelegate?
     weak var delegate: TabSwitcherDelegate!
@@ -435,6 +439,7 @@ extension TabSwitcherViewController: Themable {
         
         toolbar.barTintColor = theme.barBackgroundColor
         toolbar.tintColor = theme.barTintColor
+        bottomFiller.backgroundColor = theme.barBackgroundColor
         
         plusButton.tintColor = UIColor.white
         plusButton.backgroundColor = theme.navigationBarTintColor

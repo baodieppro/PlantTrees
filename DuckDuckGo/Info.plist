@@ -30,13 +30,13 @@
 					<string>AppIconBlue60x60</string>
 				</array>
 			</dict>
-			<key>orange</key>
+			<key>green</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>AppIconOrange29x29</string>
-					<string>AppIconOrange40x40</string>
-					<string>AppIconOrange60x60</string>
+					<string>AppIconGreen29x29</string>
+					<string>AppIconGreen40x40</string>
+					<string>AppIconGreen60x60</string>
 				</array>
 			</dict>
 			<key>purple</key>
@@ -226,7 +226,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 </dict>
 </plist>

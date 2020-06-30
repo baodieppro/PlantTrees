@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var daxDialogContainer: UIView!
     @IBOutlet weak var daxDialogContainerHeight: NSLayoutConstraint!
     weak var daxDialogViewController: DaxDialogViewController?
+    @IBOutlet weak var yourTreeCount: UILabel!
     
     var logoContainer: UIView! {
         return delegate?.homeDidRequestLogoContainer(self)
@@ -233,5 +234,6 @@ extension HomeViewController: Themable {
     func decorate(with theme: Theme) {
         collectionView.decorate(with: theme)
         settingsButton.tintColor = theme.barTintColor
+        yourTreeCount.textColor = theme.barTintColor
     }
 }

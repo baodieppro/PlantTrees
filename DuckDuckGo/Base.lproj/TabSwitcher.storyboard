@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G9p-Sf-e96">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -21,11 +21,11 @@
             <objects>
                 <viewController storyboardIdentifier="TabSwitcherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G9p-Sf-e96" customClass="TabSwitcherViewController" customModule="PlantTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WJ0-lP-E4v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tabs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy7-Lb-veV">
-                                <rect key="frame" x="188.66666666666666" y="16" width="37" height="20"/>
+                                <rect key="frame" x="188.66666666666666" y="60" width="37" height="20"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" header="YES"/>
                                 </accessibility>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7l-vl-rDZ">
-                                <rect key="frame" x="375" y="9" width="34" height="34"/>
+                                <rect key="frame" x="375" y="53" width="34" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="3is-x4-uWE"/>
                                     <constraint firstAttribute="height" constant="34" id="XXt-3T-rvh"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XZT-ek-lrC">
-                                <rect key="frame" x="0.0" y="54" width="414" height="638"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="720"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="14" minimumInteritemSpacing="14" id="bWt-k2-BEm">
                                     <size key="itemSize" width="327" height="206"/>
@@ -189,10 +189,10 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAQ-HJ-d44">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="78"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrD-ff-flI" customClass="MyToolBar" customModule="PlantTrees" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                         <items>
                                             <barButtonItem title="Home" image="Home" width="70" id="E1g-Bc-bOW">
                                                 <connections>
@@ -224,11 +224,10 @@
                                         <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </toolbar>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zr4-rI-WEu">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="49" width="414" height="29"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-m0-vLw">
-                                        <rect key="frame" x="185" y="0.0" width="44" height="44"/>
+                                        <rect key="frame" x="182.66666666666666" y="0.0" width="49" height="49"/>
                                         <color key="backgroundColor" red="0.29803921570000003" green="0.64313725489999995" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="eLs-m0-vLw" secondAttribute="height" multiplier="1:1" id="bBJ-lW-4WO"/>
@@ -278,6 +277,7 @@
                         <viewLayoutGuide key="safeArea" id="Nqt-nV-6p2"/>
                     </view>
                     <connections>
+                        <outlet property="bottomFiller" destination="Zr4-rI-WEu" id="4Te-RX-ebS"/>
                         <outlet property="collectionView" destination="XZT-ek-lrC" id="iNF-Uj-4dl"/>
                         <outlet property="doneButton" destination="S1O-aT-Bgw" id="8I7-gH-bhZ"/>
                         <outlet property="fireButton" destination="h1S-c2-Spf" id="VfW-9h-WGv"/>
@@ -302,7 +302,7 @@
     </scenes>
     <resources>
         <image name="Add" width="24" height="24"/>
-        <image name="AddBookmarks" width="24" height="24"/>
+        <image name="AddBookmarks" width="15" height="18"/>
         <image name="Fire" width="22" height="20"/>
         <image name="GlobeSmall" width="24" height="24"/>
         <image name="Home" width="20" height="20"/>
