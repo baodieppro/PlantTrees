@@ -97,7 +97,7 @@ extension TabViewController {
     }
     
     private func buildCopyAddressAction(forLink link: Link) -> UIAlertAction? {
-        return UIAlertAction(title: UserText.copyAddress, style: .default) { [weak self] _ in
+        return UIAlertAction(title: UserText.copyAddress, style: .default) { _ in
             UIPasteboard.general.string = link.url.absoluteString
         }
     }

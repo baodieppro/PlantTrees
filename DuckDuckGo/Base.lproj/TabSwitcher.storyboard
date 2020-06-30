@@ -196,7 +196,7 @@
                                         <items>
                                             <barButtonItem title="Home" image="Home" width="70" id="E1g-Bc-bOW">
                                                 <connections>
-                                                    <action selector="onFirePressed" destination="G9p-Sf-e96" id="vnk-g4-Lje"/>
+                                                    <action selector="onHomePressed:" destination="G9p-Sf-e96" id="b9H-Jb-iaB"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="C3E-Kk-DYK"/>

@@ -258,7 +258,19 @@ class TabSwitcherViewController: UIViewController {
         }
         dismiss()
     }
-
+    
+    @IBAction func onHomePressed(_ sender: Any) {
+        for i in 0..<tabsModel.count {
+            let tab = tabsModel.get(tabAt: i)
+            if tab.link == nil {
+                currentSelection = i
+                markCurrentAsViewedAndDismiss()
+                return
+            }
+        }
+        onAddPressed(self)
+    }
+    
     @IBAction func onFirePressed() {
         Pixel.fire(pixel: .forgetAllPressedTabSwitching)
         
