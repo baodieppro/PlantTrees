@@ -20,7 +20,6 @@
 import UIKit
 import WebKit
 import Core
-import Lottie
 import Kingfisher
 
 // swiftlint:disable type_body_length

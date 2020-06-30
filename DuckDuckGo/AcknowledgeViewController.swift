@@ -44,12 +44,12 @@ extension AcknowledgeViewController: Themable {
     func decorate(with theme: Theme) {
         view.backgroundColor = theme.backgroundColor
         
-        switch theme.currentImageSet {
-        case .light:
-            logoImage?.image = UIImage(named: "LogoDarkText")
-        case .dark:
-            logoImage?.image = UIImage(named: "LogoLightText")
-        }
+//        switch theme.currentImageSet {
+//        case .light:
+//            logoImage?.image = UIImage(named: "LogoDarkText")
+//        case .dark:
+//            logoImage?.image = UIImage(named: "LogoLightText")
+//        }
         
         decorateDescription(with: theme)
         
@@ -60,11 +60,11 @@ extension AcknowledgeViewController: Themable {
     private func decorateDescription(with theme: Theme) {
         if let attributedText = descriptionText.attributedText,
             var font = attributedText.attribute(NSAttributedString.Key.font, at: 0, effectiveRange: nil) as? UIFont {
-            
+
             let attributes: [NSAttributedString.Key: Any]
             if traitCollection.horizontalSizeClass == .regular,
                 traitCollection.verticalSizeClass == .regular {
-                font = font.withSize(24.0)
+                font = font.withSize(16)
                 attributes = [.foregroundColor: theme.aboutScreenTextColor,
                               .font: font]
             } else {
@@ -74,7 +74,7 @@ extension AcknowledgeViewController: Themable {
 
             let decoratedText = NSMutableAttributedString(attributedString: attributedText)
             decoratedText.addAttributes(attributes, range: NSRange(location: 0, length: decoratedText.length))
-            
+
             descriptionText.attributedText = decoratedText
         }
     }

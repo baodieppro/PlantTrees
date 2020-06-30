@@ -407,6 +407,7 @@
 		E61A82DE24AA18AE005D197E /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E61A82DB24AA18AE005D197E /* Poppins-Regular.otf */; };
 		E61A82DF24AA18AE005D197E /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E61A82DC24AA18AE005D197E /* Poppins-Medium.otf */; };
 		E61A82E124AA4B0F005D197E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61A82E024AA4B0F005D197E /* GoogleService-Info.plist */; };
+		E66FCAF824AAD8B600D08B14 /* leaf-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E66FCAF724AAD8B600D08B14 /* leaf-animation.json */; };
 		E67DA76C24A8A1DC00930C72 /* Inter-UI-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E67DA76024A8A1DC00930C72 /* Inter-UI-MediumItalic.otf */; };
 		E67DA76D24A8A1DC00930C72 /* Inter-UI-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E67DA76124A8A1DC00930C72 /* Inter-UI-ExtraBoldItalic.otf */; };
 		E67DA76E24A8A1DC00930C72 /* Inter-UI-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = E67DA76224A8A1DC00930C72 /* Inter-UI-Black.otf */; };
@@ -1066,6 +1067,7 @@
 		E61A82DB24AA18AE005D197E /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		E61A82DC24AA18AE005D197E /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		E61A82E024AA4B0F005D197E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E66FCAF724AAD8B600D08B14 /* leaf-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "leaf-animation.json"; sourceTree = "<group>"; };
 		E67DA76024A8A1DC00930C72 /* Inter-UI-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-MediumItalic.otf"; sourceTree = "<group>"; };
 		E67DA76124A8A1DC00930C72 /* Inter-UI-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
 		E67DA76224A8A1DC00930C72 /* Inter-UI-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-Black.otf"; sourceTree = "<group>"; };
@@ -1828,6 +1830,7 @@
 		859872221F5743AF00041CB8 /* FireAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				E66FCAF724AAD8B600D08B14 /* leaf-animation.json */,
 				F164DDBE1F2A509200010DD2 /* FireAnimation.swift */,
 				859872231F5743D800041CB8 /* FireAnimation.xib */,
 			);
@@ -3290,6 +3293,7 @@
 				98E6F6E8242A198700E7ED9D /* ExtraContentHomeCell.xib in Resources */,
 				AA4D6AC023DE4D15007E8790 /* AppIconYellow76x76@2x.png in Resources */,
 				AA4D6AA423DE4CC4007E8790 /* AppIconBlue29x29@2x.png in Resources */,
+				E66FCAF824AAD8B600D08B14 /* leaf-animation.json in Resources */,
 				E67DA77424A8A1DC00930C72 /* Inter-UI-SemiBoldItalic.otf in Resources */,
 				AA4D6AE323DE4D33007E8790 /* AppIconGreen60x60@2x.png in Resources */,
 				E67DA77024A8A1DC00930C72 /* Inter-UI-Bold.otf in Resources */,

@@ -45,14 +45,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1O-6u-LFY">
-                                                    <rect key="frame" x="20" y="13" width="50" height="18"/>
+                                                    <rect key="frame" x="20" y="14.000000000000002" width="46" height="17.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="InterUI-Medium" family="Inter UI" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Default" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gbx-kl-uOO">
-                                                    <rect key="frame" x="324" y="13" width="51" height="18"/>
+                                                    <rect key="frame" x="327.33333333333331" y="14.000000000000002" width="47.666666666666664" height="17.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -230,14 +230,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Fireproof Websites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UNq-DI-x5m">
-                                                    <rect key="frame" x="20" y="13" width="136" height="18"/>
+                                                    <rect key="frame" x="19.999999999999993" y="14.000000000000002" width="125.33333333333333" height="17.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="InterUI-Medium" family="Inter UI" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="On/Off" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QAv-VN-hEJ">
-                                                    <rect key="frame" x="327" y="13" width="48" height="18"/>
+                                                    <rect key="frame" x="330" y="14.000000000000002" width="45" height="17.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -258,14 +258,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Automatically Clear Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FgW-X9-qoE">
-                                                    <rect key="frame" x="20" y="13" width="178" height="18"/>
+                                                    <rect key="frame" x="20" y="14.000000000000002" width="165.66666666666666" height="17.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="InterUI-Medium" family="Inter UI" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="On/Off" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ccm-w6-p6U">
-                                                    <rect key="frame" x="327" y="13" width="48" height="18"/>
+                                                    <rect key="frame" x="330" y="14.000000000000002" width="45" height="17.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1521,18 +1521,13 @@ upgraded by Privacy Protection.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFH-je-iEA" userLabel="About Details View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="436.66666666666669"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoLightText" translatesAutoresizingMaskIntoConstraints="NO" id="GU2-av-rCY">
-                                                <rect key="frame" x="127" y="32" width="160" height="160"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="160" id="Lcf-aa-b0l">
-                                                        <variation key="heightClass=compact" constant="100"/>
-                                                    </constraint>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plant-trees-logo" translatesAutoresizingMaskIntoConstraints="NO" id="GU2-av-rCY">
+                                                <rect key="frame" x="136.66666666666666" y="60" width="140.99999999999997" height="38"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAH-AB-ttn">
-                                                <rect key="frame" x="67" y="223.99999999999997" width="280" height="288.33333333333326"/>
+                                                <rect key="frame" x="67" y="130" width="280" height="247"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="gxd-Xl-Nse">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="380"/>
@@ -1542,12 +1537,20 @@ upgraded by Privacy Protection.</string>
                                                     <fragment>
                                                         <string key="content">The development of PlantTrees has been strongly facilitated by third party code and open source projects. We would like to thank the maintainers of the following projects for letting us use them:
 
-DuckDuckGo Copyright (c) 2008 - Present by DuckDuckGo All rights reserved.
-Apache License
-Version 2.0, January 2004</string>
+</string>
                                                         <attributes>
                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" metaFont="system" size="16"/>
+                                                            <font key="NSFont" size="16" name="InterUI-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2583333333333333" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">DuckDuckGo Copyright (c) 2020 - Present by DuckDuckGo All rights reserved.
+Apache License
+Version 1.0, July 2020</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="13" name="InterUI-SemiBold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2583333333333333" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
@@ -1555,17 +1558,17 @@ Version 2.0, January 2004</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-ji-In0">
-                                                <rect key="frame" x="91.666666666666686" y="520.33333333333337" width="231" height="31"/>
+                                                <rect key="frame" x="83.666666666666686" y="385" width="247" height="31"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="aboutPage"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="o8B-yv-dj1"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
-                                                <state key="normal" title="More at duckduckgo.com/about">
+                                                <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="16"/>
+                                                <state key="normal" title="http://www.apache.org/licenses/">
                                                     <color key="titleColor" red="0.31372549020000001" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="InterUI-Regular" family="Inter UI" pointSize="24"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onPrivacyLinkTapped:" destination="SSW-dc-N9W" eventType="touchUpInside" id="YhB-NP-Jnd"/>
@@ -1574,7 +1577,7 @@ Version 2.0, January 2004</string>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="GU2-av-rCY" firstAttribute="top" secondItem="xFH-je-iEA" secondAttribute="top" constant="32" id="0zj-3V-fWI"/>
+                                            <constraint firstItem="GU2-av-rCY" firstAttribute="top" secondItem="xFH-je-iEA" secondAttribute="top" constant="60" id="0zj-3V-fWI"/>
                                             <constraint firstItem="ciS-ji-In0" firstAttribute="centerX" secondItem="xFH-je-iEA" secondAttribute="centerX" id="5AX-2K-3yq"/>
                                             <constraint firstItem="GU2-av-rCY" firstAttribute="centerX" secondItem="xFH-je-iEA" secondAttribute="centerX" id="8s9-9I-6rL"/>
                                             <constraint firstAttribute="bottom" secondItem="ciS-ji-In0" secondAttribute="bottom" constant="20.5" id="PrD-1d-CPJ"/>
@@ -1619,5 +1622,6 @@ Version 2.0, January 2004</string>
         <image name="HomeRowAppIcon" width="512" height="512"/>
         <image name="LogoLightText" width="160" height="128"/>
         <image name="PP Arrow Back" width="10" height="16"/>
+        <image name="plant-trees-logo" width="141" height="38"/>
     </resources>
 </document>

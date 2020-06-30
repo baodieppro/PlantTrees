@@ -18,16 +18,14 @@
 //
 
 import UIKit
+import Lottie
 
 extension FireAnimation: NibLoading {}
 
 class FireAnimation: UIView {
 
-    @IBOutlet var image: UIImageView!
-    @IBOutlet var offset: NSLayoutConstraint!
-
     struct Constants {
-        static let animationDuration = 1.2
+        static let animationDuration = 2.0
         static let endDelayDuration = animationDuration + 0.2
         static let endAnimationDuration = 0.2
     }
@@ -40,16 +38,21 @@ class FireAnimation: UIView {
         }
 
         let anim = FireAnimation.load(nibName: "FireAnimation")
-        anim.image.animationImages = animatedImages
-        anim.image.contentMode = window.frame.width > anim.image.animationImages![0].size.width ? .scaleAspectFill : .center
-        anim.image.startAnimating()
+//        anim.image.animationImages = animatedImages
+//        anim.image.contentMode = window.frame.width > anim.image.animationImages![0].size.width ? .scaleAspectFill : .center
+//        anim.image.startAnimating()
+        let image = LOTAnimationView(name: "leaf-animation")
+        
 
         anim.frame = window.frame
-        anim.transform.ty = anim.frame.size.height
+        image.frame = window.frame
         window.addSubview(anim)
+        window.addSubview(image)
+        
+        image.play()
 
         UIView.animate(withDuration: Constants.animationDuration, delay: 0, options: .curveEaseOut, animations: {
-            anim.transform.ty = -(anim.offset.constant * 2)
+            
         }, completion: { _ in
             completion()
         })
@@ -58,18 +61,9 @@ class FireAnimation: UIView {
             anim.alpha = 0
         }, completion: { _ in
             anim.removeFromSuperview()
+            image.removeFromSuperview()
         })
 
-    }
-
-    private static var animatedImages: [UIImage] {
-        var images = [UIImage]()
-        for i in 1...20 {
-            let filename = String(format: "flames00%02d", i)
-            let image = #imageLiteral(resourceName: filename)
-            images.append(image)
-        }
-        return images
     }
 
 }
