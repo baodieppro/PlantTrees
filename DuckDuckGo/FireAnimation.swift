@@ -25,7 +25,7 @@ extension FireAnimation: NibLoading {}
 class FireAnimation: UIView {
 
     struct Constants {
-        static let animationDuration = 2.0
+        static let animationDuration = 1.8
         static let endDelayDuration = animationDuration + 0.2
         static let endAnimationDuration = 0.2
     }
@@ -51,17 +51,15 @@ class FireAnimation: UIView {
         
         image.play()
 
-        UIView.animate(withDuration: Constants.animationDuration, delay: 0, options: .curveEaseOut, animations: {
-            
-        }, completion: { _ in
-            completion()
-        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.animationDuration) {
+            image.removeFromSuperview()
+        }
 
         UIView.animate(withDuration: Constants.endAnimationDuration, delay: Constants.endDelayDuration, options: .curveEaseOut, animations: {
             anim.alpha = 0
         }, completion: { _ in
             anim.removeFromSuperview()
-            image.removeFromSuperview()
+            completion()
         })
 
     }
