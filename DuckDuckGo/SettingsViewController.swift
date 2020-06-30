@@ -264,7 +264,7 @@ extension SettingsViewController: Themable {
         openUniversalLinksToggle.onTintColor = theme.buttonTintColor
         longPressPreviewsToggle.onTintColor = theme.buttonTintColor
         
-        tableView.backgroundColor = theme.backgroundColor
+        tableView.backgroundColor = theme.barBackgroundColor    // grouped background color
         tableView.separatorColor = theme.tableCellSeparatorColor
         
         UIView.transition(with: view,
