@@ -34,7 +34,7 @@ class AcknowledgeViewController: UIViewController {
 
     @IBAction func onPrivacyLinkTapped(_ sender: UIButton) {
         dismiss(animated: true) {
-            UIApplication.shared.open(URL(string: "http://www.apache.org/licenses/")!, options: [:])
+            UIApplication.shared.open(AppDeepLinks.apacheLicenseLink, options: [:])
         }
     }
 }
@@ -62,15 +62,7 @@ extension AcknowledgeViewController: Themable {
             var font = attributedText.attribute(NSAttributedString.Key.font, at: 0, effectiveRange: nil) as? UIFont {
 
             let attributes: [NSAttributedString.Key: Any]
-            if traitCollection.horizontalSizeClass == .regular,
-                traitCollection.verticalSizeClass == .regular {
-                font = font.withSize(16)
-                attributes = [.foregroundColor: theme.aboutScreenTextColor,
-                              .font: font]
-            } else {
-                attributes = [.foregroundColor: theme.aboutScreenTextColor,
-                              .font: font]
-            }
+            attributes = [.foregroundColor: theme.aboutScreenTextColor]
 
             let decoratedText = NSMutableAttributedString(attributedString: attributedText)
             decoratedText.addAttributes(attributes, range: NSRange(location: 0, length: decoratedText.length))

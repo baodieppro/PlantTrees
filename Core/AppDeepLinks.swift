@@ -30,6 +30,7 @@ public struct AppDeepLinks {
     public static let fire = "ddgFire://"
 
     public static let aboutLink = URL(string: "\(AppDeepLinks.quickLink)duckduckgo.com/about")!
+    public static let apacheLicenseLink = URL(string: "\(AppDeepLinks.quickLink)www.apache.org/licenses/")!
 
     public static func isNewSearch(url: URL) -> Bool {
         return isUrl(url, deepLink: AppDeepLinks.newSearch)
