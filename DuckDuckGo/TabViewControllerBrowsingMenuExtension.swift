@@ -26,9 +26,9 @@ extension TabViewController {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alert.overrideUserInterfaceStyle()
-//        alert.addAction(title: UserText.actionNewTab) { [weak self] in
-//            self?.onNewTabAction()
-//        }
+        alert.addAction(title: UserText.actionNewTab) { [weak self] in
+            self?.onNewTabAction()
+        }
         
         if let link = link, !isError {
             let action = UIAlertAction(title: UserText.actionShare, style: .default) { [weak self] (action) in
@@ -36,51 +36,44 @@ extension TabViewController {
                self.onShareAction(forLink: link, printFormatter: self.webView.viewPrintFormatter())
             }
 //            action.setValue(<#T##value: Any?##Any?#>, forKey: "image")
-            action.setValue(0, forKey: "titleTextAlignment")
             alert.addAction(action)
             
             if let action = buildSaveBookmarkAction(forLink: link) {
-                action.setValue(0, forKey: "titleTextAlignment")
                 alert.addAction(action)
             }
             
             if let action = buildSaveFavoriteAction(forLink: link) {
-                action.setValue(0, forKey: "titleTextAlignment")
                 alert.addAction(action)
             }
             
             if let action = buildCopyAddressAction(forLink: link) {
-                action.setValue(0, forKey: "titleTextAlignment")
                 alert.addAction(action)
             }
             
             if let action = buildFindInPageAction(forLink: link) {
-                action.setValue(0, forKey: "titleTextAlignment")
                 alert.addAction(action)
             }
 
-//            if let action = buildKeepSignInAction(forLink: link) {
-//                alert.addAction(action)
-//            }
+            if let action = buildKeepSignInAction(forLink: link) {
+                alert.addAction(action)
+            }
             let toggleTitle = tabModel.isDesktop ? UserText.actionRequestMobileSite : UserText.actionRequestDesktopSite
             let toggleAction = UIAlertAction(title: toggleTitle, style: .default, handler: { [weak self] (action) in
                 self?.onToggleDesktopSiteAction(forUrl: link.url)
             })
-            toggleAction.setValue(0, forKey: "titleTextAlignment")
             alert.addAction(toggleAction)
         }
         
-//        if let domain = siteRating?.domain {
-//            alert.addAction(buildWhitelistAction(forDomain: domain))
-//        }
+        if let domain = siteRating?.domain {
+            alert.addAction(buildWhitelistAction(forDomain: domain))
+        }
         
-//        alert.addAction(title: UserText.actionReportBrokenSite) { [weak self] in
-//            self?.onReportBrokenSiteAction()
-//        }
+        alert.addAction(title: UserText.actionReportBrokenSite) { [weak self] in
+            self?.onReportBrokenSiteAction()
+        }
         let action = UIAlertAction(title: UserText.actionSettings, style: .default) { [weak self] (action) in
             self?.onBrowsingSettingsAction()
         }
-        action.setValue(0, forKey: "titleTextAlignment")
         alert.addAction(action)
         
         let cancelAction = UIAlertAction(title: UserText.actionCancel, style: .cancel, handler: nil)
