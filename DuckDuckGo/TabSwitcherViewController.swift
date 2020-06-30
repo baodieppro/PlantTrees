@@ -79,7 +79,6 @@ class TabSwitcherViewController: UIViewController {
     @IBOutlet weak var toolbar: UIToolbar!
     
     @IBOutlet weak var settingsButton: UIButton!
-    @IBOutlet weak var bookmarkAllButton: UIButton!
     
     @IBOutlet weak var fireButton: UIBarButtonItem!
     @IBOutlet weak var doneButton: UIBarButtonItem!
@@ -216,7 +215,7 @@ class TabSwitcherViewController: UIViewController {
         return (newBookmarksCount: newBookmarksCount, existingBookmarksCount: existingBookmarksCount)
     }
     
-    @IBAction func onBookmarkAllOpenTabsPressed(_ sender: UIButton) {
+    @IBAction func onBookmarkAllOpenTabsPressed(_ sender: UIBarButtonItem) {
         
         guard tabsModel.tabs.count > 0 else {
             view.showBottomToast(UserText.bookmarkAllTabsNotFound)
@@ -418,7 +417,9 @@ extension TabSwitcherViewController: Themable {
         
         titleView.textColor = theme.barTintColor
         settingsButton.tintColor = theme.barTintColor
-        bookmarkAllButton.tintColor = theme.barTintColor
+//        bookmarkAllButton.tintColor = theme.barTintColor
+        
+        doneButton.tintColor = theme.navigationBarTintColor
         
         toolbar.barTintColor = theme.barBackgroundColor
         toolbar.tintColor = theme.barTintColor
