@@ -54,7 +54,7 @@ struct LightTheme: Theme {
 
     var autocompleteCellAccessoryColor = UIColor.darkGreyish
     
-    var tableCellBackgroundColor = UIColor.nearlyWhiteLight
+    var tableCellBackgroundColor = UIColor.white
     var tableCellSelectedColor = UIColor.mercury
     var tableCellSeparatorColor = UIColor.mercury
     var tableCellTextColor = UIColor.darkGreyish
