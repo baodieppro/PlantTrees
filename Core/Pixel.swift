@@ -78,7 +78,7 @@ public enum PixelName: String {
 
     case settingsAppIconShown = "ms_ais"
     case settingsAppIconChangedPrefix = "ms_aic_"
-    case settingsAppIconChangedRed = "ms_aic_red"
+    case settingsAppIconChangedOrange = "ms_aic_orange"
     case settingsAppIconChangedYellow = "ms_aic_yellow"
     case settingsAppIconChangedGreen = "ms_aic_green"
     case settingsAppIconChangedBlue = "ms_aic_blue"

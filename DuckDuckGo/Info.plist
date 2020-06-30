@@ -30,13 +30,13 @@
 					<string>AppIconBlue60x60</string>
 				</array>
 			</dict>
-			<key>green</key>
+			<key>orange</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>AppIconGreen29x29</string>
-					<string>AppIconGreen40x40</string>
-					<string>AppIconGreen60x60</string>
+					<string>AppIconOrange29x29</string>
+					<string>AppIconOrange40x40</string>
+					<string>AppIconOrange60x60</string>
 				</array>
 			</dict>
 			<key>purple</key>

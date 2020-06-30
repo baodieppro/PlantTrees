@@ -20,26 +20,26 @@
 import UIKit
 
 enum AppIcon: String, CaseIterable {
-    case red
-    case yellow
     case green
+    case orange
+    case black
     case blue
     case purple
-    case black
+    case yellow
 
     static var defaultAppIcon: AppIcon {
-        return .red
+        return .green
     }
 
     var smallImage: UIImage? {
         var image: UIImage?
         switch self {
-        case .red: image = UIImage(named: "AppIconRed29x29")
-        case .yellow: image = UIImage(named: "AppIconYellow29x29")
         case .green: image = UIImage(named: "AppIconGreen29x29")
+        case .orange: image = UIImage(named: "AppIconOrange29x29")
+        case .black: image = UIImage(named: "AppIconBlack29x29")
         case .blue: image = UIImage(named: "AppIconBlue29x29")
         case .purple: image = UIImage(named: "AppIconPurple29x29")
-        case .black: image = UIImage(named: "AppIconBlack29x29")
+        case .yellow: image = UIImage(named: "AppIconYellow29x29")
         }
         return image
     }
@@ -47,12 +47,12 @@ enum AppIcon: String, CaseIterable {
     var mediumImage: UIImage? {
         var image: UIImage?
         switch self {
-        case .red: image = UIImage(named: "AppIconRed60x60")
-        case .yellow: image = UIImage(named: "AppIconYellow60x60")
         case .green: image = UIImage(named: "AppIconGreen60x60")
+        case .orange: image = UIImage(named: "AppIconOrange60x60")
+        case .black: image = UIImage(named: "AppIconBlack60x60")
         case .blue: image = UIImage(named: "AppIconBlue60x60")
         case .purple: image = UIImage(named: "AppIconPurple60x60")
-        case .black: image = UIImage(named: "AppIconBlack60x60")
+        case .yellow: image = UIImage(named: "AppIconYellow60x60")
         }
         return image
     }
