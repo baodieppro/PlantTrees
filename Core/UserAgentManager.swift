@@ -2,7 +2,7 @@
 //  UserAgentConfiguration.swift
 //  Core
 //
-//  Copyright © 2020 DuckDuckGo. All rights reserved.
+//  Copyright © 2020All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -90,7 +90,7 @@ struct UserAgent {
     private let baseAgent: String
     private let baseDesktopAgent: String
     private let safariComponent: String
-    private let applicationComponent = "DuckDuckGo/\(AppVersion.shared.majorVersionNumber)"
+    private let applicationComponent = "PlantTrees/\(AppVersion.shared.majorVersionNumber)"
     
     init(defaultAgent: String = Constants.fallbackDefaultAgent) {
         baseAgent = defaultAgent

@@ -1,8 +1,8 @@
 //
 //  APIHeadersTests.swift
-//  DuckDuckGo
+
 //
-//  Copyright © 2018 DuckDuckGo. All rights reserved.
+//  Copyright © 2018All rights reserved.
 //
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");

@@ -1,8 +1,8 @@
 //
 //  SaveBookmarksActivity.swift
-//  DuckDuckGo
+
 //
-//  Copyright © 2017 DuckDuckGo. All rights reserved.
+//  Copyright © 2017 All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -71,5 +71,5 @@ class SaveBookmarkActivity: UIActivity {
 }
 
 extension UIActivity.ActivityType {
-    public static let saveBookmarkInDuckDuckGo = UIActivity.ActivityType("com.duckduckgo.save.bookmark")
+    public static let saveBookmarkInDuckDuckGo = UIActivity.ActivityType("com.planttrees.eco.save.bookmark")
 }
