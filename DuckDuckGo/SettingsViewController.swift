@@ -36,7 +36,8 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var longPressPreviewsToggle: UISwitch!
     @IBOutlet weak var rememberLoginsCell: UITableViewCell!
     @IBOutlet weak var rememberLoginsAccessoryText: UILabel!
-
+    @IBOutlet weak var myTreeCountLabel: UILabel!
+    
     @IBOutlet weak var longPressCell: UITableViewCell!
 
     @IBOutlet var labels: [UILabel]!
@@ -63,6 +64,7 @@ class SettingsViewController: UITableViewController {
         configureUniversalLinksToggle()
         configureLinkPreviewsToggle()
         configureRememberLogins()
+        configureMyTreeCount()
         
         applyTheme(ThemeManager.shared.currentTheme)
     }
@@ -167,6 +169,12 @@ class SettingsViewController: UITableViewController {
         } else {
             rememberLoginsCell.isHidden = true
         }        
+    }
+    
+    private func configureMyTreeCount() {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        myTreeCountLabel.text = numberFormatter.string(from: NSNumber(value: myTreeCount))
     }
 
     private func configureVersionText() {
