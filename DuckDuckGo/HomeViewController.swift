@@ -150,7 +150,7 @@ class HomeViewController: UIViewController {
         
         viewHasAppeared = true
     }
-        
+
     func installHomeScreenTips() {
         let variantManager = DefaultVariantManager()
         if variantManager.isSupported(feature: .daxOnboarding) {
