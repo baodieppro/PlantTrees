@@ -395,6 +395,8 @@
 		AAF2E28B23E049DF00962AF8 /* AppIconYellow83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2E28A23E049DF00962AF8 /* AppIconYellow83.5x83.5@2x.png */; };
 		B58D5CA0D19BB6A276A60238 /* Pods_BookmarksTodayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223E0BB53D60803D648606DB /* Pods_BookmarksTodayExtension.framework */; };
 		C6FCB0F5F6BBBBA8C30AD759 /* Pods_Instruments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8DAC8C7B0767B55D8F4058 /* Pods_Instruments.framework */; };
+		E614B48524AC45D5004A3B91 /* LoginParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B48424AC45D5004A3B91 /* LoginParser.swift */; };
+		E614B48724AC45E6004A3B91 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B48624AC45E6004A3B91 /* LoginResponse.swift */; };
 		E61A82DD24AA18AE005D197E /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E61A82DA24AA18AE005D197E /* Poppins-SemiBold.otf */; };
 		E61A82DE24AA18AE005D197E /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E61A82DB24AA18AE005D197E /* Poppins-Regular.otf */; };
 		E61A82DF24AA18AE005D197E /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E61A82DC24AA18AE005D197E /* Poppins-Medium.otf */; };
@@ -1054,6 +1056,8 @@
 		CB8E9F0A2319136D1E3DC578 /* Pods-OpenAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenAction.release.xcconfig"; path = "Target Support Files/Pods-OpenAction/Pods-OpenAction.release.xcconfig"; sourceTree = "<group>"; };
 		D099AEDED062668CC0D244A4 /* Pods-ShareExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension.debug.xcconfig"; path = "Target Support Files/Pods-ShareExtension/Pods-ShareExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		E46FC6EC85362524B6364238 /* Pods-QuickActionsTodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickActionsTodayExtension.debug.xcconfig"; path = "Target Support Files/Pods-QuickActionsTodayExtension/Pods-QuickActionsTodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		E614B48424AC45D5004A3B91 /* LoginParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginParser.swift; sourceTree = "<group>"; };
+		E614B48624AC45E6004A3B91 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		E61A82DA24AA18AE005D197E /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		E61A82DB24AA18AE005D197E /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		E61A82DC24AA18AE005D197E /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
@@ -2178,6 +2182,7 @@
 			isa = PBXGroup;
 			children = (
 				F1134EAF1F40AC6300B73467 /* AtbParser.swift */,
+				E614B48424AC45D5004A3B91 /* LoginParser.swift */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -2186,6 +2191,7 @@
 			isa = PBXGroup;
 			children = (
 				F1134EB21F40AD2500B73467 /* Atb.swift */,
+				E614B48624AC45E6004A3B91 /* LoginResponse.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -4176,9 +4182,11 @@
 				85C743902154E981005CF998 /* GradeCache.swift in Sources */,
 				85BA79911F6FF75000F59015 /* ContentBlockerStoreConstants.swift in Sources */,
 				85BDC3142434D8F80053DB07 /* DebugUserScript.swift in Sources */,
+				E614B48524AC45D5004A3B91 /* LoginParser.swift in Sources */,
 				85047B861F6887D2002A95D8 /* ContentBlockerLoader.swift in Sources */,
 				F1134EDA1F40FC3F00B73467 /* InfoBundle.swift in Sources */,
 				85F21DC621145DD5002631A6 /* global.swift in Sources */,
+				E614B48724AC45E6004A3B91 /* LoginResponse.swift in Sources */,
 				836A941D247F23C600BF8EF5 /* UserAgentManager.swift in Sources */,
 				F143C3181E4A99D200CFDE3A /* Link.swift in Sources */,
 				F1CE42A61ECA0A460074A8DF /* BookmarkUserDefaults.swift in Sources */,

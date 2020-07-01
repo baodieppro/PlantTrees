@@ -31,4 +31,5 @@ class MockStatisticsStore: StatisticsStore {
     }
 
     var variant: String?
+    var uid: String?
 }

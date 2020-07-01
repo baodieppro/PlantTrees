@@ -24,8 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoLightText" translatesAutoresizingMaskIntoConstraints="NO" id="eFh-7e-TRG">
-                                <rect key="frame" x="107.66666666666669" y="92" width="160" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plant-trees-logo" translatesAutoresizingMaskIntoConstraints="NO" id="eFh-7e-TRG">
+                                <rect key="frame" x="117" y="92" width="141" height="38"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJr-Jr-nbF">
                                 <rect key="frame" x="0.0" y="584" width="375" height="135"/>
@@ -86,6 +86,6 @@
     </scenes>
     <resources>
         <image name="AuthRequired" width="56" height="56"/>
-        <image name="LogoLightText" width="160" height="128"/>
+        <image name="plant-trees-logo" width="141" height="38"/>
     </resources>
 </document>

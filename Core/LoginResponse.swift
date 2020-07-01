@@ -1,8 +1,8 @@
 //
-//  global.swift
+//  Atb.swift
 //  DuckDuckGo
 //
-//  Copyright © 2018 DuckDuckGo. All rights reserved.
+//  Copyright © 2017 DuckDuckGo. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,19 +17,11 @@
 //  limitations under the License.
 //
 
-import UIKit
+import Foundation
 
-/// Shortcut to `UIApplication.shared.statusBarOrientation.isPortrait`
-///
-/// Device orientation contains multiple states including unknown and flat, where as this approach is binary.
-var isPortrait: Bool {
-    return UIApplication.shared.statusBarOrientation.isPortrait
+public struct LoginResponse: Decodable {
+
+    let u: String
+    let c: Int
+
 }
-
-/// Shortcut to `UIDevice.current.userInterfaceIdiom == .pad`
-public var isPad: Bool {
-    return UIDevice.current.userInterfaceIdiom == .pad
-}
-
-public var myTreeCount = 0
-public var totalTreeCount = 0

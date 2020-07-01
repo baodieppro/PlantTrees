@@ -54,6 +54,12 @@ class CenteredSearchHomeViewSectionRenderer: HomeViewSectionRenderer {
     
     init(fixed: Bool) {
         self.fixed = fixed
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTotalTrees), name: TreeChangeNotification.total, object: nil)
+    }
+    
+    @objc func updateTotalTrees() {
+        self.controller?.collectionView.reloadItems(at: [IndexPath(row: 0, section: 0)])
     }
     
     func install(into controller: HomeViewController) {
@@ -114,6 +120,10 @@ class CenteredSearchHomeViewSectionRenderer: HomeViewSectionRenderer {
         cell.tapped = self.tapped
         cell.targetSearchHeight = controller?.chromeDelegate?.omniBar.editingBackground.frame.height ?? 0
         cell.targetSearchRadius = controller?.chromeDelegate?.omniBar.editingBackground.layer.cornerRadius ?? 0
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        cell.totalTrees.text = numberFormatter.string(from: NSNumber(value: totalTreeCount))
         self.cell = cell
         return cell
     }

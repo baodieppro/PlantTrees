@@ -49,6 +49,8 @@ public struct AppUrls {
 
         static let pixelBase = ProcessInfo.processInfo.environment["PIXEL_BASE_URL", default: "https://improving.duckduckgo.com"]
         static let pixel = "\(pixelBase)/t/%@_ios_%@"
+        
+        static let login = "\(base)/get-user-synced"
     }
 
     private struct Param {
@@ -93,6 +95,10 @@ public struct AppUrls {
 
     public var feedback: URL {
         return URL(string: Url.feedback)!
+    }
+    
+    public var login: URL {
+        return URL(string: Url.login)!
     }
     
     public func faviconUrl(forDomain domain: String) -> URL? {

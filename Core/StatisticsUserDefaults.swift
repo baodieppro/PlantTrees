@@ -29,6 +29,7 @@ public class StatisticsUserDefaults: StatisticsStore {
         static let searchRetentionAtb = "com.duckduckgo.statistics.retentionatb.key"
         static let appRetentionAtb = "com.duckduckgo.statistics.appretentionatb.key"
         static let variant = "com.duckduckgo.statistics.variant.key"
+        static let uid = "com.duckduckgo.statistics.uid"
     }
 
     private var userDefaults: UserDefaults? {
@@ -93,6 +94,16 @@ public class StatisticsUserDefaults: StatisticsStore {
 
         set {
             userDefaults?.setValue(newValue, forKey: Keys.variant)
+        }
+    }
+    
+    public var uid: String? {
+        get {
+            return userDefaults?.string(forKey: Keys.uid)
+        }
+
+        set {
+            userDefaults?.setValue(newValue, forKey: Keys.uid)
         }
     }
 }

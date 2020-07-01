@@ -29,6 +29,7 @@ public class StatisticsLoader {
     private let statisticsStore: StatisticsStore
     private let appUrls: AppUrls
     private let parser = AtbParser()
+    private let loginParser = LoginParser()
     
     init(statisticsStore: StatisticsStore = StatisticsUserDefaults()) {
         self.statisticsStore = statisticsStore
@@ -95,6 +96,28 @@ public class StatisticsLoader {
         }
     }
     
+    public func fetchUID(completion: @escaping Completion = {}) {
+        guard (self.statisticsStore.uid) == nil else {
+            completion()
+            return
+        }
+
+        APIRequest.request(url: appUrls.login) { response, error in
+            if error != nil {
+                completion()
+                return
+            }
+            if let data = response?.data, let login = try? self.loginParser.convert(fromJsonData: data) {
+                self.statisticsStore.uid = login.u
+            }
+            completion()
+        }
+    }
+    
+    public func getUID() -> String? {
+        return self.statisticsStore.uid
+    }
+    
     public func refreshAppRetentionAtb(completion: @escaping Completion = {}) {
         
         guard let url = appUrls.appAtb else {
@@ -121,4 +144,6 @@ public class StatisticsLoader {
             statisticsStore.atb = updateVersion
         }
     }
+    
+    
 }

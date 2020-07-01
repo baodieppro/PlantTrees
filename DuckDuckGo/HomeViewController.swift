@@ -20,6 +20,11 @@
 import UIKit
 import Core
 
+public struct TreeChangeNotification {
+    public static let mine = Notification.Name(rawValue: "com.duckduckgo.myTreeCountChange")
+    public static let total = Notification.Name(rawValue: "com.duckduckgo.totalTreeCountChange")
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var ctaContainerBottom: NSLayoutConstraint!
@@ -78,6 +83,20 @@ class HomeViewController: UIViewController {
 
         collectionView.configure(withController: self, andTheme: ThemeManager.shared.currentTheme)
         applyTheme(ThemeManager.shared.currentTheme)
+        
+        updateMyTrees()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMyTrees), name: TreeChangeNotification.mine, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func updateMyTrees() {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        yourTreeCount.text = numberFormatter.string(from: NSNumber(value: myTreeCount))
     }
     
     func enableContentUnderflow() -> CGFloat {
