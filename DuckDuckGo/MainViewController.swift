@@ -340,6 +340,20 @@ class MainViewController: UIViewController {
         onBookmarksPressed()
     }
     
+    @IBAction func onHomePressed(_ sender: Any) {
+        let tabsModel = tabManager.model
+        for i in 0..<tabsModel.count {
+            let tab = tabsModel.get(tabAt: i)
+            if tab.link == nil {
+                tab.viewed = true
+                tabsModel.save()
+                select(tabAt: i)
+                return
+            }
+        }
+        newTab()
+    }
+    
     @IBAction func onFirePressed() {
         Pixel.fire(pixel: .forgetAllPressedBrowsing)
 
