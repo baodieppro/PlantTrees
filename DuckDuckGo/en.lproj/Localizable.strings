@@ -187,7 +187,7 @@
 "keyCommandClose" = "Close";
 "keyCommandSelect" = "Select";
 
-"contextualOnboardingSearchPrivately" = "You search the web, we plant trees. Save our Planet.";
+"contextualOnboardingSearchPrivately" = "Search with PlantTrees as you care for the environment. 🌴🌱🦩🐢🐋";
 "contextualOnboardingCustomizeTheme" = "Want a different look? Try changing the theme!";
 "contextualOnboardingPrivacyGrade" = "PlantTrees enhances your privacy as you browse. Tap the privacy grade icon to learn how.";
 "contextualOnboardingFireButton" = "Tap the yellow leaf icon to erase your tabs and browsing data, or make it automatic in settings.";
@@ -326,9 +326,9 @@
 
 "dax.onboarding.home.initial" = "Search the web, save the Earth.\n\nWe use 80% profit we make from your searches to plant trees where they are needed most. On average, we need around 45 searches from you to plant a tree.";
 
-"dax.onboarding.home.subsequent" = "You’ve got this!\n\nRemember: every time you browse with me a creepy ad loses its wings. 👍";
+"dax.onboarding.home.subsequent" = "Green Fact!\nA tree consumes 48 pounds of CO2 per year as it matures.🌴";
 
-"dax.onboarding.browsing.after.search" = "Make a difference every day.\nOn avarage, 45 searches from you plant 1 tree.";
+"dax.onboarding.browsing.after.search" = "Approximately, 45 searches with PlantTrees from you contribute to planting 1 tree.";
 "dax.onboarding.browsing.after.search.cta" = "Act for the future";
 
 "dax.onboarding.browsing.without.trackers" = "As you tap and scroll, I'll block pesky trackers.\n\nGo head - keep browsing!";

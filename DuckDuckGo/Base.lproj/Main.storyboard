@@ -112,6 +112,46 @@
                                 <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joh-ih-gzV">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8aW-AJ-KXg">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="32"/>
+                                    </constraint>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Home" image="Home" id="G18-Zl-Nja"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tLi-bi-orT"/>
+                                    <barButtonItem title="Erase Tabs and Data" image="Fire" id="CdC-dz-pWG">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Fire"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onFirePressed" destination="C1X-Zd-UbA" id="iHA-ww-eOu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KUh-b8-llT"/>
+                                    <barButtonItem title="Bookmarks" image="Bookmarks" id="y6C-rv-Dgn">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Bookmarks"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBookmarkPressed:" destination="C1X-Zd-UbA" id="4vc-XY-pLV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CGx-ii-Gwd"/>
+                                    <barButtonItem title="Tab Switcher" image="Tabs" id="uzK-Hh-KlZ" userLabel="Tabs Button">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Tabs"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="p9L-cF-4aL" kind="presentation" identifier="ShowTabs" modalPresentationStyle="overCurrentContext" id="jIC-o8-iqD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPc-P1-sCk" customClass="FindInPageView" customModule="PlantTrees" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="713" width="414" height="49"/>
                                 <subviews>
@@ -239,14 +279,17 @@
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iiL-6e-jxs" firstAttribute="bottom" secondItem="nQT-PV-ULm" secondAttribute="bottom" id="1ip-bk-RO5"/>
+                            <constraint firstItem="joh-ih-gzV" firstAttribute="leading" secondItem="Krm-hA-s9u" secondAttribute="leading" id="2EK-id-HZF"/>
                             <constraint firstItem="EJw-WC-cX3" firstAttribute="centerX" secondItem="Vxt-xD-aBt" secondAttribute="centerX" id="5ha-ed-qjz"/>
                             <constraint firstItem="nQT-PV-ULm" firstAttribute="top" secondItem="uBn-Md-Q2c" secondAttribute="top" id="BrS-Dd-c0g"/>
                             <constraint firstItem="iiL-6e-jxs" firstAttribute="width" secondItem="Vxt-xD-aBt" secondAttribute="width" id="CfL-Ud-UIC"/>
                             <constraint firstItem="EJw-WC-cX3" firstAttribute="height" secondItem="Vxt-xD-aBt" secondAttribute="height" id="E8u-Qv-Iac"/>
                             <constraint firstItem="uBn-Md-Q2c" firstAttribute="bottom" secondItem="yPc-P1-sCk" secondAttribute="bottom" constant="100" id="FWX-GD-c7o"/>
+                            <constraint firstItem="joh-ih-gzV" firstAttribute="trailing" secondItem="Krm-hA-s9u" secondAttribute="trailing" id="Fk3-YH-gkT"/>
                             <constraint firstItem="iiL-6e-jxs" firstAttribute="centerX" secondItem="uBn-Md-Q2c" secondAttribute="centerX" id="GYY-82-9YX"/>
                             <constraint firstItem="kFG-OX-YkL" firstAttribute="width" secondItem="nQT-PV-ULm" secondAttribute="width" id="HdJ-g2-Ov8"/>
                             <constraint firstItem="kFG-OX-YkL" firstAttribute="bottom" secondItem="nQT-PV-ULm" secondAttribute="bottom" id="LiF-mb-9zs"/>
+                            <constraint firstItem="joh-ih-gzV" firstAttribute="bottom" secondItem="Krm-hA-s9u" secondAttribute="bottom" id="MY2-KY-S8a"/>
                             <constraint firstItem="Krm-hA-s9u" firstAttribute="top" secondItem="Ylj-oJ-fqD" secondAttribute="bottom" id="N6y-rD-Nne"/>
                             <constraint firstItem="lJT-0B-l2J" firstAttribute="width" secondItem="Vxt-xD-aBt" secondAttribute="width" id="NuH-hE-pWg"/>
                             <constraint firstItem="lJT-0B-l2J" firstAttribute="top" secondItem="nQT-PV-ULm" secondAttribute="bottom" id="P7O-RF-g4h"/>
@@ -282,6 +325,7 @@
                         <outlet property="findInPageView" destination="yPc-P1-sCk" id="4A5-7s-6Cm"/>
                         <outlet property="fireButton" destination="ntb-c7-mjV" id="llw-tb-jJd"/>
                         <outlet property="forwardButton" destination="cUp-YP-aMf" id="7WB-lN-1AY"/>
+                        <outlet property="homeToolbar" destination="joh-ih-gzV" id="2NP-98-MEc"/>
                         <outlet property="logo" destination="KGS-6D-8Qu" id="s74-lP-CUt"/>
                         <outlet property="logoContainer" destination="EJw-WC-cX3" id="XCK-NR-gCt"/>
                         <outlet property="navBarTop" destination="BrS-Dd-c0g" id="1ta-NK-q4L"/>
@@ -371,13 +415,18 @@
             <point key="canvasLocation" x="-203" y="537"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jIC-o8-iqD"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Bookmarks" width="25.333333969116211" height="25.333333969116211"/>
         <image name="BrowseNext" width="24" height="24"/>
         <image name="BrowsePrevious" width="24" height="24"/>
         <image name="Fire" width="22" height="20"/>
+        <image name="Home" width="20" height="20"/>
         <image name="NewTab" width="24" height="24"/>
         <image name="SearchLoupeMini" width="23" height="23"/>
+        <image name="Tabs" width="20" height="20"/>
         <image name="find-next-dark" width="19" height="20"/>
         <image name="find-previous-dark" width="19" height="20"/>
         <image name="plant-trees-logo" width="141" height="38"/>

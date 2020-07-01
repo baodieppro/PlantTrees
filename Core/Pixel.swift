@@ -267,21 +267,21 @@ public class Pixel {
                             withHeaders headers: HTTPHeaders = APIHeaders().defaultHeaders,
                             onComplete: @escaping (Error?) -> Void = {_ in }) {
         
-        var newParams = params
-        newParams[PixelParameters.appVersion] = AppVersion.shared.versionAndBuildNumber
-        if isDebugBuild {
-            newParams[PixelParameters.test] = PixelValues.test
-        }
-        
-        let formFactor = deviceType == .pad ? Constants.tablet : Constants.phone
-        let url = appUrls
-            .pixelUrl(forPixelNamed: pixel.rawValue, formFactor: formFactor)
-            .addParams(newParams)
-        
-        Alamofire.request(url, headers: headers).validate(statusCode: 200..<300).response { response in
-            os_log("Pixel fired %s %s", log: generalLog, type: .debug, pixel.rawValue, "\(params)")
-            onComplete(response.error)
-        }
+//        var newParams = params
+//        newParams[PixelParameters.appVersion] = AppVersion.shared.versionAndBuildNumber
+//        if isDebugBuild {
+//            newParams[PixelParameters.test] = PixelValues.test
+//        }
+//
+//        let formFactor = deviceType == .pad ? Constants.tablet : Constants.phone
+//        let url = appUrls
+//            .pixelUrl(forPixelNamed: pixel.rawValue, formFactor: formFactor)
+//            .addParams(newParams)
+//
+//        Alamofire.request(url, headers: headers).validate(statusCode: 200..<300).response { response in
+//            os_log("Pixel fired %s %s", log: generalLog, type: .debug, pixel.rawValue, "\(params)")
+//            onComplete(response.error)
+//        }
     }
     
 }

@@ -40,6 +40,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var forwardButton: UIBarButtonItem!
     @IBOutlet weak var tabsButton: UIBarButtonItem!
+    @IBOutlet weak var homeToolbar: UIToolbar!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var navBarTop: NSLayoutConstraint!
     @IBOutlet weak var toolbarBottom: NSLayoutConstraint!
@@ -127,7 +128,7 @@ class MainViewController: UIViewController {
         let showOnboarding = !settings.hasSeenOnboarding ||
             // allow oboarding to forced via environment variable - see scheme
             ProcessInfo.processInfo.environment["ONBOARDING"] == "true"
-        guard showOnboarding else { return }
+        guard !showOnboarding else { return }
 
         let onboardingFlow: String
         let variantManager = DefaultVariantManager()
@@ -335,6 +336,10 @@ class MainViewController: UIViewController {
         homeController = nil
     }
 
+    @IBAction func onBookmarkPressed(_ sender: Any) {
+        onBookmarksPressed()
+    }
+    
     @IBAction func onFirePressed() {
         Pixel.fire(pixel: .forgetAllPressedBrowsing)
 
@@ -455,6 +460,8 @@ class MainViewController: UIViewController {
         refreshTabIcon()
         refreshOmniBar()
         refreshBackForwardButtons()
+        
+        homeToolbar.isHidden = currentTab?.url != nil
     }
 
     private func refreshTabIcon() {
@@ -1166,6 +1173,9 @@ extension MainViewController: Themable {
         
         toolbar?.barTintColor = theme.barBackgroundColor
         toolbar?.tintColor = theme.barTintColor
+        
+        homeToolbar?.barTintColor = theme.barBackgroundColor
+        homeToolbar?.tintColor = theme.barTintColor
         
         tabSwitcherButton.decorate(with: theme)
         gestureBookmarksButton.decorate(with: theme)
