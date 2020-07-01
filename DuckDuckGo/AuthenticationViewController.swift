@@ -101,12 +101,5 @@ extension AuthenticationViewController: Themable {
     
     func decorate(with theme: Theme) {
         view.backgroundColor = theme.backgroundColor
-        
-        switch theme.currentImageSet {
-        case .light:
-            logo?.image = UIImage(named: "LogoDarkText")
-        case .dark:
-            logo?.image = UIImage(named: "LogoLightText")
-        }
     }
 }
