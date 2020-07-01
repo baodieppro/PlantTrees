@@ -69,7 +69,7 @@ class BrowsingTips {
             delegate?.showPrivacyGradeTip(didShow: completion)
             
         case .fireButton:
-            delegate?.showFireButtonTip(didShow: completion)
+            break
             
         }
         
