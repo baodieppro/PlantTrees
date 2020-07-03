@@ -30,10 +30,12 @@ PODS:
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
+  - Nantes (0.1.1)
   - PromisesObjC (1.2.9)
 
 DEPENDENCIES:
   - Firebase/Database
+  - Nantes
 
 SPEC REPOS:
   trunk:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - GoogleUtilities
     - leveldb-library
     - nanopb
+    - Nantes
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -58,8 +61,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
+  Nantes: e11fbe0b6214de8c09cc8b763dbf61f70fbbf885
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
 
-PODFILE CHECKSUM: ea175eff6e38b879769634038f502252512bc836
+PODFILE CHECKSUM: d3f8ae10c8ba2de3b462e62504151b83997b0eab
 
 COCOAPODS: 1.9.3

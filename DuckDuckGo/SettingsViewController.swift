@@ -21,6 +21,7 @@ import UIKit
 import MessageUI
 import Core
 import Device
+import Nantes
 
 class SettingsViewController: UITableViewController {
 
@@ -37,6 +38,7 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var rememberLoginsCell: UITableViewCell!
     @IBOutlet weak var rememberLoginsAccessoryText: UILabel!
     @IBOutlet weak var myTreeCountLabel: UILabel!
+    @IBOutlet weak var myTreeDescription: NantesLabel!
     
     @IBOutlet weak var longPressCell: UITableViewCell!
 
@@ -175,6 +177,8 @@ class SettingsViewController: UITableViewController {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         myTreeCountLabel.text = numberFormatter.string(from: NSNumber(value: AppUserDefaults().myTreeCount))
+        
+        myTreeDescription.addLink(to: URL(string: "https://planttrees.eco.how-it-work")!, withRange: (myTreeDescription.text! as NSString).range(of: "Learn more"))
     }
 
     private func configureVersionText() {

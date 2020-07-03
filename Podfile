@@ -39,6 +39,7 @@ target 'PlantTrees' do
 
   # Pods for PlantTrees
   pod 'Firebase/Database'
+  pod 'Nantes'
 end
 
 target 'QuickActionsTodayExtension' do
