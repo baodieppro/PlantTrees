@@ -45,13 +45,6 @@ extension AboutViewController: Themable {
     func decorate(with theme: Theme) {
         view.backgroundColor = theme.backgroundColor
         
-        switch theme.currentImageSet {
-        case .light:
-            logoImage?.image = UIImage(named: "LogoDarkText")
-        case .dark:
-            logoImage?.image = UIImage(named: "LogoLightText")
-        }
-        
         decorateDescription(with: theme)
         
         headerText.textColor = theme.aboutScreenTextColor
