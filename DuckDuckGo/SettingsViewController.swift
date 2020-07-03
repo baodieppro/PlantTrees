@@ -178,7 +178,14 @@ class SettingsViewController: UITableViewController {
         numberFormatter.numberStyle = .decimal
         myTreeCountLabel.text = numberFormatter.string(from: NSNumber(value: AppUserDefaults().myTreeCount))
         
-        myTreeDescription.addLink(to: URL(string: "https://planttrees.eco.how-it-work")!, withRange: (myTreeDescription.text! as NSString).range(of: "Learn more"))
+        myTreeDescription.delegate = self
+        myTreeDescription.font = UIFont(name: "InterUI-Regular", size: 14)
+        myTreeDescription.linkAttributes = [
+            NSAttributedString.Key.foregroundColor: ThemeManager.shared.currentTheme.navigationBarTintColor,
+        ]
+        myTreeDescription.activeLinkAttributes = [
+            NSAttributedString.Key.foregroundColor: ThemeManager.shared.currentTheme.navigationBarTintColor,
+        ]
     }
 
     private func configureVersionText() {
@@ -271,6 +278,10 @@ extension SettingsViewController: Themable {
         
         versionText.textColor = theme.tableCellTextColor
         
+        myTreeDescription.textColor = theme.tableCellTextColor
+        myTreeDescription.text = "On average you need around 45 searches to plant a tree. Learn more"
+        myTreeDescription.addLink(to: URL(string: "\(AppDeepLinks.quickLink)planttrees.eco/how-it-work")!, withRange: (myTreeDescription.text! as NSString).range(of: "Learn more"))
+        
         autocompleteToggle.onTintColor = theme.buttonTintColor
         authenticationToggle.onTintColor = theme.buttonTintColor
         openUniversalLinksToggle.onTintColor = theme.buttonTintColor
@@ -284,6 +295,14 @@ extension SettingsViewController: Themable {
                           options: .transitionCrossDissolve, animations: {
                             self.tableView.reloadData()
         }, completion: nil)
+    }
+}
+
+extension SettingsViewController: NantesLabelDelegate {
+    func attributedLabel(_ label: NantesLabel, didSelectLink link: URL) {
+        dismiss(animated: true) {
+            UIApplication.shared.open(link, options: [:])
+        }
     }
 }
 
