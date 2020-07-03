@@ -174,7 +174,7 @@ class SettingsViewController: UITableViewController {
     private func configureMyTreeCount() {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        myTreeCountLabel.text = numberFormatter.string(from: NSNumber(value: myTreeCount))
+        myTreeCountLabel.text = numberFormatter.string(from: NSNumber(value: AppUserDefaults().myTreeCount))
     }
 
     private func configureVersionText() {

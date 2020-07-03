@@ -40,7 +40,7 @@ public class APIRequest {
                                parameters: [String: Any]? = nil,
                                completion: @escaping APIRequestCompletion) -> Request {
         os_log("Requesting %s", log: generalLog, type: .debug, url.absoluteString)
-        
+
         return Alamofire.request(url, method: method, parameters: parameters, headers: APIHeaders().defaultHeaders)
             .validate(statusCode: 200..<300)
             .responseData(queue: callbackQueue) { response in

@@ -66,6 +66,7 @@ public class WebCacheManager {
         let group = DispatchGroup()
                         
         for cookie in cookies {
+            print(cookie.name)
             group.enter()
             httpCookieStore.setCookie(cookie) {
                 group.leave()

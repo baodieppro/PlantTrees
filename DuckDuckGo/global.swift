@@ -30,6 +30,3 @@ var isPortrait: Bool {
 public var isPad: Bool {
     return UIDevice.current.userInterfaceIdiom == .pad
 }
-
-public var myTreeCount = 0
-public var totalTreeCount = 0

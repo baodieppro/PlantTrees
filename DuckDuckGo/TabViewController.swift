@@ -22,6 +22,8 @@ import Core
 import Device
 import StoreKit
 import os.log
+import Firebase
+import Alamofire
 
 // swiftlint:disable file_length
 // swiftlint:disable type_body_length
@@ -257,6 +259,26 @@ class TabViewController: UIViewController {
         updateContentMode()
         
         instrumentation.didPrepareWebView()
+
+        DispatchQueue.main.async {
+            WKWebsiteDataStore.default().httpCookieStore.getAllCookies { (cookies) in
+                for cookie in cookies {
+                    if cookie.domain == "planttrees.eco" && cookie.name == "i_u" {
+                        Alamofire.SessionManager.default.session.configuration.httpCookieStorage?.setCookie(cookie)
+                        StatisticsLoader.shared.fetchUID { (uid) in
+                            if uid != nil {
+                                Database.database().reference().child("users_sync/\(uid!)/i/rq").observe(.value) { (snapshot) in
+                                    if let count = snapshot.value as? Int {
+                                        AppUserDefaults().myTreeCount = count
+                                        NotificationCenter.default.post(Notification(name: TreeChangeNotification.mine))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         if consumeCookies {
             consumeCookiesThenLoadRequest(request)

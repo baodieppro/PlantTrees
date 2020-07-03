@@ -96,21 +96,22 @@ public class StatisticsLoader {
         }
     }
     
-    public func fetchUID(completion: @escaping Completion = {}) {
+    public func fetchUID(completion: @escaping ((_ uid: String?) -> Void)) {
         guard (self.statisticsStore.uid) == nil else {
-            completion()
+            completion(nil)
             return
         }
 
         APIRequest.request(url: appUrls.login) { response, error in
             if error != nil {
-                completion()
+                completion(nil)
                 return
             }
             if let data = response?.data, let login = try? self.loginParser.convert(fromJsonData: data) {
-                self.statisticsStore.uid = login.u
+                completion(login.u)
+                return
             }
-            completion()
+            completion(nil)
         }
     }
     

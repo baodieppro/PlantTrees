@@ -23,6 +23,8 @@ import EasyTipView
 import UserNotifications
 import os.log
 import Firebase
+import Core
+import WebKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var privacyStore = PrivacyUserDefaults()
     private var autoClear: AutoClear?
     private var showKeyboardIfSettingOn = true
+    
+    var i_u: String = ""
 
     // MARK: lifecycle
 
@@ -114,24 +118,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         StatisticsLoader.shared.load {
-            StatisticsLoader.shared.refreshAppRetentionAtb()
-            StatisticsLoader.shared.fetchUID {
-                if let uid = StatisticsLoader.shared.getUID() {
-                    Database.database().reference().child("users_sync/\(uid)/i/rq").observe(.value) { (snapshot) in
-                        if let count = snapshot.value as? Int {
-                            myTreeCount = count
-                            NotificationCenter.default.post(Notification(name: TreeChangeNotification.mine))
-                        }
-                    }
-                    
-                    Database.database().reference().child("request/total").observe(.value) { (snapshot) in
-                        if let count = snapshot.value as? Int {
-                            totalTreeCount = count
-                            NotificationCenter.default.post(Notification(name: TreeChangeNotification.total))
-                        }
-                    }
+            Database.database().reference().child("request/total").observe(.value) { (snapshot) in
+                if let count = snapshot.value as? Int {
+                    AppUserDefaults().totalTreeCount = count
+                    NotificationCenter.default.post(Notification(name: TreeChangeNotification.total))
                 }
             }
+            StatisticsLoader.shared.refreshAppRetentionAtb()
             Pixel.fire(pixel: .appLaunch)
         }
         

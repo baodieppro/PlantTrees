@@ -96,7 +96,7 @@ class HomeViewController: UIViewController {
     @objc func updateMyTrees() {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        yourTreeCount.text = numberFormatter.string(from: NSNumber(value: myTreeCount))
+        yourTreeCount.text = numberFormatter.string(from: NSNumber(value: AppUserDefaults().myTreeCount))
     }
     
     func enableContentUnderflow() -> CGFloat {

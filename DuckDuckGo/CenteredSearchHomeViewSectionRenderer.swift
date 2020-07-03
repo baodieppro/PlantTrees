@@ -123,7 +123,7 @@ class CenteredSearchHomeViewSectionRenderer: HomeViewSectionRenderer {
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        cell.totalTrees.text = numberFormatter.string(from: NSNumber(value: 100000000 - totalTreeCount / 45))
+        cell.totalTrees.text = numberFormatter.string(from: NSNumber(value: 100000000 - AppUserDefaults().totalTreeCount / 45))
         self.cell = cell
         return cell
     }
