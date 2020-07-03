@@ -40,7 +40,7 @@ public protocol WebCacheManagerDataStore {
 public class WebCacheManager {
 
     private struct Constants {
-        static let cookieDomain = "duckduckgo.com"
+        static let cookieDomains = ["planttrees.eco", "pt.eco"]
     }
     
     public static var shared = WebCacheManager()
@@ -142,7 +142,7 @@ public class WebCacheManager {
         
         cookieStore.getAllCookies { cookies in
             for cookie in cookies {
-                if cookie.domain == Constants.cookieDomain || logins.isAllowed(cookieDomain: cookie.domain) {
+                if Constants.cookieDomains.contains(cookie.domain)  || logins.isAllowed(cookieDomain: cookie.domain) {
                     cookieStorage.setCookie(cookie)
                 }
             }
