@@ -17,9 +17,9 @@
   limitations under the License.
 */
 
-"app.authentication.unlock" = "Unlock PlantTrees";
-"home.link.title" = "PlantTrees Home";
-"search.hint.duckduckgo" = "Search the web to plant trees";
+"app.authentication.unlock" = "Unlock Onbibi";
+"home.link.title" = "Onbibi Home";
+"search.hint.duckduckgo" = "Search the web...";
 "web.session.clear" = "Session cleared";
 "web.url.save.bookmark.done" = "Bookmark saved";
 "web.url.save.bookmark.exists" = "Bookmark already saved";
@@ -143,15 +143,15 @@
 
 "unknown.error.occurred" = "An unknown error occured";
 
-"home.row.reminder.title" = "Take PlantTrees home";
-"home.row.reminder.message" = "Add PlantTrees to your dock for easy access!";
+"home.row.reminder.title" = "Take Onbibi home";
+"home.row.reminder.message" = "Add Onbibi to your dock for easy access!";
 
-"home.row.onboarding.header" = "Add PlantTrees to your home screen!";
+"home.row.onboarding.header" = "Add Onbibi to your home screen!";
 
 "feedback.submitted.confirmation" = "Thank You! Feedback submitted.";
 
 "prompt.custom.url.scheme.title" = "Open in Another App?";
-"prompt.custom.url.scheme.prompt" = "Would you like to leave PlantTrees to view this content?";
+"prompt.custom.url.scheme.prompt" = "Would you like to leave Onbibi to view this content?";
 "prompt.custom.url.scheme.open" = "Yes";
 "prompt.custom.url.scheme.dontopen" = "No";
 
@@ -187,9 +187,9 @@
 "keyCommandClose" = "Close";
 "keyCommandSelect" = "Select";
 
-"contextualOnboardingSearchPrivately" = "Search with PlantTrees as you care for the environment. 🌴🌱🦩🐢🐋";
+"contextualOnboardingSearchPrivately" = "Search with Onbibi to explore the internet safely. 🌴🌱🦩🐢🐋";
 "contextualOnboardingCustomizeTheme" = "Want a different look? Try changing the theme!";
-"contextualOnboardingPrivacyGrade" = "PlantTrees enhances your privacy as you browse. Tap the privacy grade icon to learn how.";
+"contextualOnboardingPrivacyGrade" = "Onbibi enhances your privacy as you browse. Tap the privacy grade icon to learn how.";
 "contextualOnboardingFireButton" = "Tap the yellow leaf icon to erase your tabs and browsing data, or make it automatic in settings.";
 
 "bookmarkAll.tabs.notfound" = "No tabs to bookmark";
@@ -263,11 +263,11 @@
 "feedback.websiteLoading.form.urlPlaceholder" = "Which website has issues?";
 "feedback.websiteLoading.form.placeholder" = "What content seems to be affected?";
 
-"feedback.ddgSearch.entry" = "PlantTrees search isn't good enough";
-"feedback.ddgSearch.description" = "PlantTrees Search Issues";
+"feedback.ddgSearch.entry" = "Onbibi search isn't good enough";
+"feedback.ddgSearch.description" = "Onbibi Search Issues";
 "feedback.ddgSearch.caption" = "Which search feature can we add or improve?";
 "feedback.ddgSearch.technical" = "Programming/technical search";
-"feedback.ddgSearch.layout" = "The layout should be more like Google";
+"feedback.ddgSearch.layout" = "The layout should be better";
 "feedback.ddgSearch.loadTime" = "Faster load time";
 "feedback.ddgSearch.languageOrRegion" = "Searching in a specific language or region";
 "feedback.ddgSearch.autocomplete" = "Better autocomplete";
@@ -297,7 +297,7 @@
 
 "feedback.form.caption" = "Please tell us what we can improve";
 
-"onboardingWelcomeHeader" = "Welcome to PlantTrees!";
+"onboardingWelcomeHeader" = "Welcome to Onbibi!";
 "onboardingContinue" = "CONTINUE";
 "onboardingSkip" = "Skip";
 "onboardingNext" = "NEXT";
@@ -324,11 +324,11 @@
 "homeTab.searchAndFavorites" = "Search and favorites in a new tab";
 "homeTab.title" = "Home";
 
-"dax.onboarding.home.initial" = "Search the web, save the Earth.\n\nWe use 80% profit we make from your searches to plant trees where they are needed most. On average, we need around 45 searches from you to plant a tree.";
+"dax.onboarding.home.initial" = "Onbibi - Fast & Safe Web Browser";
 
-"dax.onboarding.home.subsequent" = "Green Fact!\nA tree consumes 48 pounds of CO2 per year as it matures.🌴";
+"dax.onboarding.home.subsequent" = "Fact!\nA Onbibi protects your privacy.🌴";
 
-"dax.onboarding.browsing.after.search" = "Approximately, 45 searches with PlantTrees from you contribute to planting 1 tree.";
+"dax.onboarding.browsing.after.search" = "Explore the internet safely with Onbibi.";
 "dax.onboarding.browsing.after.search.cta" = "Act for the future";
 
 "dax.onboarding.browsing.without.trackers" = "As you tap and scroll, I'll block pesky trackers.\n\nGo head - keep browsing!";
